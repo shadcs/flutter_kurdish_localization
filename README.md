@@ -32,5 +32,5 @@ return MaterialApp(
 
 ## Links
 
-- [Source code](https://github.com)
+- [Source code](https://github.com/shadcs/flutter_kurdish_localization)
 - [Facebook](https://www.facebook.com/shad.cs)
