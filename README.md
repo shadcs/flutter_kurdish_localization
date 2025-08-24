@@ -6,7 +6,7 @@ This package provides unofficial localization support for \*Central Kurdish Bran
 
 ### Getting Started
 
-`import 'package:quick-soft/flutter_kurdish_localization.dart';`
+`import 'package:kurdish_localization_plus/flutter_kurdish_localization.dart';`
 
 Add these two delegates to _localizationsDelegates_ array
 
