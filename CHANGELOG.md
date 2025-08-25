@@ -13,3 +13,8 @@
 ## 1.0.3
 
 - Some minor bugs were fixed.
+
+## 1.0.4
+
+- Example added for using Kurdish localization Plus in a Flutter app.
+- Swift Package Manager support added.
