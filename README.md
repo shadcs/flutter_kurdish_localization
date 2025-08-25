@@ -21,8 +21,8 @@ return MaterialApp(
 		KurdishWidgetLocalizations.delegate,
 		...
 	],
-	supportedLocales: [ Locale('ku') ]
-	locale: Locale('ku')
+	supportedLocales: [ Locale('ckb') ]
+	locale: Locale('ckb')
  )
 ```
 

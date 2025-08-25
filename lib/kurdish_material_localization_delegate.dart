@@ -12,11 +12,11 @@ class _KurdishMaterialLocalizationsDelegate
   const _KurdishMaterialLocalizationsDelegate();
 
   @override
-  bool isSupported(Locale locale) => locale.languageCode == 'ku';
+  bool isSupported(Locale locale) => locale.languageCode == 'ckb';
 
   @override
   Future<MaterialLocalizations> load(Locale locale) async {
-    const String localeName = 'ku';
+    const String localeName = 'ckb';
 
     date_symbol_data_custom.initializeDateFormattingCustom(
       locale: localeName,
@@ -50,7 +50,7 @@ class _KurdishMaterialLocalizationsDelegate
 
 class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   const KurdishMaterialLocalizations({
-    String localeName = 'ku',
+    String localeName = 'ckb',
     required intl.DateFormat fullYearFormat,
     required intl.DateFormat shortDateFormat,
     required intl.DateFormat compactDateFormat,
@@ -574,7 +574,7 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
 }
 
 const kuDateSymbols = {
-  'NAME': 'ku',
+  'NAME': 'ckb',
   'ERAS': ['پ.ز', 'ز'],
   'ERANAMES': ['پێش زاینی', 'زاینی'],
   'NARROWMONTHS': [

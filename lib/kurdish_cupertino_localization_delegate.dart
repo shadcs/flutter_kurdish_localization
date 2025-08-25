@@ -65,7 +65,7 @@ const kurdishLocaleDatePatterns = {
 /// `no` locale to demonstrate how one would write and use custom date symbols.
 // #docregion Date2
 const kuDateSymbols2 = {
-  'NAME': 'ku',
+  'NAME': 'ckb',
   'ERAS': ['پ.ز', 'ز'],
   'ERANAMES': ['پێش زاینی', 'زاینی'],
   'NARROWMONTHS': [
@@ -224,7 +224,7 @@ class KurdishCupertinoLocalizationsDelegate
   const KurdishCupertinoLocalizationsDelegate();
 
   @override
-  bool isSupported(Locale locale) => locale.languageCode == 'ku';
+  bool isSupported(Locale locale) => locale.languageCode == 'ckb';
 
   @override
   Future<CupertinoLocalizations> load(Locale locale) async {
@@ -274,7 +274,7 @@ class KurdishCupertinoLocalizationsDelegate
 /// and formatting.
 class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
   const KurdishCupertinoLocalizations({
-    String localeName = 'ku',
+    String localeName = 'ckb',
     required intl.DateFormat fullYearFormat,
     required intl.DateFormat mediumDateFormat,
     required intl.NumberFormat decimalFormat,

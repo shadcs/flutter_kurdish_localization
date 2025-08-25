@@ -23,9 +23,9 @@ class MyApp extends StatelessWidget {
       ],
       supportedLocales: const [
         Locale('en', 'US'),
-        Locale('ku', 'IQ'), // Kurdish
+        Locale('ckb', 'IQ'), // Kurdish
       ],
-      locale: const Locale('ku', 'IQ'),
+      locale: const Locale('ckb', 'IQ'),
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -65,7 +65,8 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              MaterialLocalizations.of(context).aboutListTileTitle('Kurdish Localization'),
+              MaterialLocalizations.of(context)
+                  .aboutListTileTitle('Kurdish Localization'),
               style: Theme.of(context).textTheme.headlineSmall,
             ),
             const SizedBox(height: 20),
@@ -83,12 +84,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 showDialog(
                   context: context,
                   builder: (context) => AlertDialog(
-                    title: Text(MaterialLocalizations.of(context).alertDialogLabel),
-                    content: const Text('This is an example of Kurdish localization in action!'),
+                    title: Text(
+                        MaterialLocalizations.of(context).alertDialogLabel),
+                    content: const Text(
+                        'This is an example of Kurdish localization in action!'),
                     actions: [
                       TextButton(
                         onPressed: () => Navigator.of(context).pop(),
-                        child: Text(MaterialLocalizations.of(context).okButtonLabel),
+                        child: Text(
+                            MaterialLocalizations.of(context).okButtonLabel),
                       ),
                     ],
                   ),
@@ -101,7 +105,8 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
-                    content: Text(MaterialLocalizations.of(context).closeButtonTooltip),
+                    content: Text(
+                        MaterialLocalizations.of(context).closeButtonTooltip),
                     action: SnackBarAction(
                       label: MaterialLocalizations.of(context).closeButtonLabel,
                       onPressed: () {},
