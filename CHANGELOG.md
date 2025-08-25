@@ -18,3 +18,8 @@
 
 - Example added for using Kurdish localization Plus in a Flutter app.
 - Swift Package Manager support added.
+
+## 1.0.5
+
+- Change language code from 'ku' to 'ckb'.
+- Fix web build issue.
