@@ -22,7 +22,7 @@ return MaterialApp(
 		...
 	],
 	supportedLocales: [ Locale('ku') ]
-	ocale: Locale('ku')
+	locale: Locale('ku')
  )
 ```
 
