@@ -218,9 +218,9 @@ const kuDateSymbols2 = {
   'FIRSTWEEKCUTOFFDAY': 3
 };
 
-// KRM (Kurmanji) Date Symbols for Cupertino
-const krmCupertinoDateSymbols = {
-  'NAME': 'krm',
+// KMR (Kurmanji) Date Symbols for Cupertino
+const kmrCupertinoDateSymbols = {
+  'NAME': 'kmr',
   'ERAS': ['BZ', 'PZ'],
   'ERANAMES': ['Berî Zayînê', 'Piştî Zayînê'],
   'NARROWMONTHS': [
@@ -373,7 +373,7 @@ const krmCupertinoDateSymbols = {
   'FIRSTWEEKCUTOFFDAY': 3
 };
 
-const krmCupertinoDatePatterns = {
+const kmrCupertinoDatePatterns = {
   'd': 'd.',
   'E': 'ccc',
   'EEEE': 'cccc',
@@ -427,18 +427,20 @@ class KurdishCupertinoLocalizationsDelegate
 
   @override
   bool isSupported(Locale locale) => 
-      locale.languageCode == 'ckb' || locale.languageCode == 'krm';
+      locale.languageCode == 'ckb' || locale.languageCode == 'kmr';
 
   @override
   Future<CupertinoLocalizations> load(Locale locale) async {
-    final String localeName = intl.Intl.canonicalizedLocale(locale.toString());
-    // The locale (in this case `ckb` or `krm`) needs to be initialized into the custom
+    final String localeName = locale.languageCode;
+    final bool isKmr = localeName == 'kmr';
+    
+    // The locale needs to be initialized into the custom
     // date symbols and patterns setup that Flutter uses.
     date_symbol_data_custom.initializeDateFormattingCustom(
       locale: localeName,
-      patterns: locale.languageCode == 'krm' ? krmCupertinoDatePatterns : kurdishLocaleDatePatterns,
+      patterns: isKmr ? kmrCupertinoDatePatterns : kurdishLocaleDatePatterns,
       symbols: intl.DateSymbols.deserializeFromMap(
-          locale.languageCode == 'krm' ? krmCupertinoDateSymbols : kuDateSymbols2),
+          isKmr ? kmrCupertinoDateSymbols : kuDateSymbols2),
     );
 
     return SynchronousFuture<CupertinoLocalizations>(
@@ -503,92 +505,92 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
         );
 
   final String _localeName;
-  bool get _isKrm => _localeName == 'krm';
+  bool get _isKmr => _localeName == 'kmr';
 
 // #docregion Getters
 
   @override
-  String get alertDialogLabel => _isKrm ? r'Hişyarî' : r'ئاگادارکردنەوە';
+  String get alertDialogLabel => _isKmr ? r'Hişyarî' : r'ئاگادارکردنەوە';
 
 // #enddocregion Getters
 
   @override
-  String get anteMeridiemAbbreviation => _isKrm ? r'BN' : r'پ.ن';
+  String get anteMeridiemAbbreviation => _isKmr ? r'BN' : r'پ.ن';
 
   @override
-  String get copyButtonLabel => _isKrm ? r'Jêber bike' : r'کۆپی';
+  String get copyButtonLabel => _isKmr ? r'Jêber bike' : r'کۆپی';
 
   @override
-  String get cutButtonLabel => _isKrm ? r'Jê bibe' : r'بڕین';
+  String get cutButtonLabel => _isKmr ? r'Jê bibe' : r'بڕین';
 
   @override
-  String get modalBarrierDismissLabel => _isKrm ? r'Betal bike' : r'لادان';
+  String get modalBarrierDismissLabel => _isKmr ? r'Betal bike' : r'لادان';
 
   @override
-  String get pasteButtonLabel => _isKrm ? r'Pêve bike' : r'پەیست';
+  String get pasteButtonLabel => _isKmr ? r'Pêve bike' : r'پەیست';
 
   @override
-  String get postMeridiemAbbreviation => _isKrm ? r'PN' : r'د.ن';
+  String get postMeridiemAbbreviation => _isKmr ? r'PN' : r'د.ن';
 
   @override
-  String get selectAllButtonLabel => _isKrm ? r'Hemûyan hilbijêre' : r'دیاریکردنی هەموو';
+  String get selectAllButtonLabel => _isKmr ? r'Hemûyan hilbijêre' : r'دیاریکردنی هەموو';
 
   static const LocalizationsDelegate<CupertinoLocalizations> delegate =
       KurdishCupertinoLocalizationsDelegate();
 
   @override
-  String get datePickerDateOrderString => _isKrm ? "Hilbijartina dîrokê" : "هەڵبژاردنی بەروار";
+  String get datePickerDateOrderString => _isKmr ? "Hilbijartina dîrokê" : "هەڵبژاردنی بەروار";
 
   @override
-  String get datePickerDateTimeOrderString => _isKrm ? "Dem hilbijêre" : "کات هەڵبژێرە";
+  String get datePickerDateTimeOrderString => _isKmr ? "Dem hilbijêre" : "کات هەڵبژێرە";
 
   @override
-  String? get datePickerHourSemanticsLabelOther => _isKrm ? "Demjimêrî hilbijartina dîrokê" : "کاتژمێری هەڵبژاردنی بەروار";
+  String? get datePickerHourSemanticsLabelOther => _isKmr ? "Demjimêrî hilbijartina dîrokê" : "کاتژمێری هەڵبژاردنی بەروار";
 
   @override
-  String? get datePickerMinuteSemanticsLabelOther => _isKrm ? "Deqîqeyî hilbijartina dîrokê" : "خولەکی هەڵبژاردنی بەروار";
+  String? get datePickerMinuteSemanticsLabelOther => _isKmr ? "Deqîqeyî hilbijartina dîrokê" : "خولەکی هەڵبژاردنی بەروار";
 
   @override
-  String get searchTextFieldPlaceholderLabel => _isKrm ? "Lêgerîn" : "گەڕان";
+  String get searchTextFieldPlaceholderLabel => _isKmr ? "Lêgerîn" : "گەڕان";
 
   @override
-  String get tabSemanticsLabelRaw => _isKrm ? "Manasaziya tab" : "ماناسازی تاب";
+  String get tabSemanticsLabelRaw => _isKmr ? "Manasaziya tab" : "ماناسازی تاب";
 
   @override
-  String? get timerPickerHourLabelOther => _isKrm ? "Hilbijêreri demjimêr" : "هەڵبژێرەری کاتژمێر";
+  String? get timerPickerHourLabelOther => _isKmr ? "Hilbijêreri demjimêr" : "هەڵبژێرەری کاتژمێر";
 
   @override
-  String? get timerPickerMinuteLabelOther => _isKrm ? "Hilbijêreri deqîqe" : "هەڵبژێرەری خولەک";
+  String? get timerPickerMinuteLabelOther => _isKmr ? "Hilbijêreri deqîqe" : "هەڵبژێرەری خولەک";
 
   @override
-  String? get timerPickerSecondLabelOther => _isKrm ? "Hilbijêreri çirke" : "هەڵبژێرەری چرکە";
+  String? get timerPickerSecondLabelOther => _isKmr ? "Hilbijêreri çirke" : "هەڵبژێرەری چرکە";
 
   @override
-  String get todayLabel => _isKrm ? "Îro" : "ئەمڕۆ";
+  String get todayLabel => _isKmr ? "Îro" : "ئەمڕۆ";
 
   @override
-  String get noSpellCheckReplacementsLabel => _isKrm
+  String get noSpellCheckReplacementsLabel => _isKmr
       ? "Tu guherîneyek kontrola rênivîsê nîye"
       : "هیچ جێگرەوەیەکی پشکنینی ڕێنووسی نییە";
 
   @override
-  String get lookUpButtonLabel => _isKrm ? 'Li dû da gerrîn' : 'بە دوادا گەڕان';
+  String get lookUpButtonLabel => _isKmr ? 'Li dû da gerrîn' : 'بە دوادا گەڕان';
 
   @override
-  String get menuDismissLabel => _isKrm ? 'Menû belav bike' : 'بەلاوە نان';
+  String get menuDismissLabel => _isKmr ? 'Menû belav bike' : 'بەلاوە نان';
 
   @override
-  String get searchWebButtonLabel => _isKrm ? 'Li wêbê bigere' : 'گەڕان لە وێب';
+  String get searchWebButtonLabel => _isKmr ? 'Li wêbê bigere' : 'گەڕان لە وێب';
 
   @override
-  String get shareButtonLabel => _isKrm ? 'Hevparkirinê' : 'هاوبەشکردن';
+  String get shareButtonLabel => _isKmr ? 'Hevparkirinê' : 'هاوبەشکردن';
 
   @override
   String get clearButtonLabel => "";
 
   @override
-  String get backButtonLabel => _isKrm ? 'Vegere' : 'گەڕان';
+  String get backButtonLabel => _isKmr ? 'Vegere' : 'گەڕان';
 
   @override
-  String get cancelButtonLabel => _isKrm ? 'Betal bike' : 'هەڵوەشاندنەوە';
+  String get cancelButtonLabel => _isKmr ? 'Betal bike' : 'هەڵوەشاندنەوە';
 }

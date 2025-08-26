@@ -3,6 +3,7 @@
 This package provides unofficial localization support for **Central Kurdish (Sorani)** and **Kurmanji** dialects.
 
 **Supported Kurdish Dialects:**
+
 - **CKB** - Central Kurdish/Sorani (کوردیی ناوەندی/سۆرانی)
 - **KRM** - Kurmanji (کورمانجی)
 
@@ -30,19 +31,20 @@ return MaterialApp(
   ],
   supportedLocales: [
   Locale('en', 'US'),
-  Locale('ckb', 'IQ'), // Central Kurdish (Sorani, RTL)
-  Locale('krm', 'TR'), // Kurmanji (LTR)
+  Locale('ckb'), // Central Kurdish (Sorani, RTL)
+  Locale('kmr'), // Kurmanji (LTR) - ISO 639-3 standard
+  // or use Locale('krm') for compatibility
   ],
-  locale: Locale('ckb', 'IQ'), // Default locale
+  locale: Locale('ckb'), // Default locale
 )
 ```
 
 ### Supported Locales
 
-| Language Code | Dialect | Region | Description |
-|---------------|---------|--------|-------------|
-| `ckb` | Central Kurdish | IQ | سۆرانی - Sorani Kurdish |
-| `krm` | Kurmanji | TR | کورمانجی - Northern Kurdish |
+| Language Code | Dialect         | Description                 | Note               |
+| ------------- | --------------- | --------------------------- | ------------------ |
+| `ckb`         | Central Kurdish | سۆرانی - Sorani Kurdish     | Standard           |
+| `kmr`         | Kurmanji        | کورمانجی - Northern Kurdish | ISO 639-3 standard |
 
 ---
 

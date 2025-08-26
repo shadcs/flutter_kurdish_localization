@@ -14,7 +14,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Locale _currentLocale = const Locale('ckb', 'IQ');
+  Locale _currentLocale = const Locale('ckb');
 
   void _changeLocale(Locale locale) {
     setState(() {
@@ -36,8 +36,8 @@ class _MyAppState extends State<MyApp> {
       ],
       supportedLocales: const [
         Locale('en', 'US'),
-        Locale('ckb', 'IQ'), // Central Kurdish (Sorani)
-        Locale('krm', 'TR'), // Kurmanji
+        Locale('ckb'), // Central Kurdish (Sorani)
+        Locale('kmr'), // Kurmanji (standard ISO 639-3 code)
       ],
       locale: _currentLocale,
       theme: ThemeData(
@@ -92,11 +92,11 @@ class _MyHomePageState extends State<MyHomePage> {
             onSelected: widget.onLocaleChange,
             itemBuilder: (BuildContext context) => [
               const PopupMenuItem<Locale>(
-                value: Locale('ckb', 'IQ'),
+                value: Locale('ckb'),
                 child: Text('Central Kurdish (Sorani)'),
               ),
               const PopupMenuItem<Locale>(
-                value: Locale('krm', 'TR'),
+                value: Locale('kmr'),
                 child: Text('Kurmanji'),
               ),
               const PopupMenuItem<Locale>(

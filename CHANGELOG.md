@@ -26,8 +26,8 @@
 
 ## 1.1.0
 
-- **MAJOR UPDATE**: Added Kurmanji (KRM) dialect support alongside Central Kurdish (CKB)
-- Support for both `ckb` (Central Kurdish/Sorani) and `krm` (Kurmanji) locales
+- **MAJOR UPDATE**: Added Kurmanji (KMR) dialect support alongside Central Kurdish (CKB)
+- Support for both `ckb` (Central Kurdish/Sorani) and `kmr` (Kurmanji) locales
 - Updated all localization delegates (Material, Widget, Cupertino) to support both dialects
 - Added comprehensive Kurmanji translations for all UI components
 - Updated example app to demonstrate both Kurdish dialects
@@ -35,4 +35,4 @@
 
 ## 1.1.1
 
-- Fix text direction for Kurmanji (KRM) localization
+- Fix text direction for Kurmanji (KMR) localization

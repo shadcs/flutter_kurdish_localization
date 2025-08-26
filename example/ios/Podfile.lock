@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - kurdish_localization_plus (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - kurdish_localization_plus (from `.symlinks/plugins/kurdish_localization_plus/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  kurdish_localization_plus:
+    :path: ".symlinks/plugins/kurdish_localization_plus/ios"
+
+SPEC CHECKSUMS:
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  kurdish_localization_plus: cec54ef631e6760fbdbdc049a334692aa0bba3ba
+
+PODFILE CHECKSUM: 4305caec6b40dde0ae97be1573c53de1882a07e5
+
+COCOAPODS: 1.16.2
