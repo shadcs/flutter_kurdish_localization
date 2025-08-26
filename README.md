@@ -5,7 +5,7 @@ This package provides unofficial localization support for **Central Kurdish (Sor
 **Supported Kurdish Dialects:**
 
 - **CKB** - Central Kurdish/Sorani (کوردیی ناوەندی/سۆرانی)
-- **KRM** - Kurmanji (کورمانجی)
+- **KMR** - Kurmanji (کورمانجی)
 
 ---
 
