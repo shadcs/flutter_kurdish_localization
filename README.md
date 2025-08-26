@@ -29,9 +29,9 @@ return MaterialApp(
     KurdishCupertinoLocalizations.delegate,
   ],
   supportedLocales: [
-    Locale('en', 'US'),
-    Locale('ckb', 'IQ'), // Central Kurdish (Sorani)
-    Locale('krm', 'TR'), // Kurmanji
+  Locale('en', 'US'),
+  Locale('ckb', 'IQ'), // Central Kurdish (Sorani, RTL)
+  Locale('krm', 'TR'), // Kurmanji (LTR)
   ],
   locale: Locale('ckb', 'IQ'), // Default locale
 )

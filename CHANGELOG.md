@@ -32,3 +32,7 @@
 - Added comprehensive Kurmanji translations for all UI components
 - Updated example app to demonstrate both Kurdish dialects
 - Enhanced documentation with locale codes and usage examples
+
+## 1.1.1
+
+- Fix text direction for Kurmanji (KRM) localization

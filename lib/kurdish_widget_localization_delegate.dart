@@ -33,7 +33,8 @@ class KurdishWidgetLocalizations extends WidgetsLocalizations {
       _KurdishMaterialLocalizationsDelegate();
 
   @override
-  TextDirection get textDirection => _isKrm ? TextDirection.ltr : TextDirection.rtl;
+  @override
+  TextDirection get textDirection => localeName == 'krm' ? TextDirection.ltr : TextDirection.rtl;
 
   @override
   String get copyButtonLabel => _isKrm ? 'Jêber bike' : 'کۆپی';
