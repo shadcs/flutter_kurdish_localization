@@ -1,6 +1,6 @@
 name: kurdish_localization_plus
-description: Flutter Central Kurdish Localization in easy steps, simple ways to localize and translate your app to Central Kurdish.
-version: 1.0.5
+description: Flutter Kurdish Localization supporting both Central Kurdish (Sorani/CKB) and Kurmanji (KRM) dialects with comprehensive Material, Widget, and Cupertino localizations.
+version: 1.1.0
 homepage: https://github.com/shadcs/flutter_kurdish_localization
 license: MIT
 

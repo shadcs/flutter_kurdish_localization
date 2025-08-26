@@ -218,23 +218,227 @@ const kuDateSymbols2 = {
   'FIRSTWEEKCUTOFFDAY': 3
 };
 
+// KRM (Kurmanji) Date Symbols for Cupertino
+const krmCupertinoDateSymbols = {
+  'NAME': 'krm',
+  'ERAS': ['BZ', 'PZ'],
+  'ERANAMES': ['Berî Zayînê', 'Piştî Zayînê'],
+  'NARROWMONTHS': [
+    'R.P',
+    'R.D',
+    'A',
+    'N',
+    'G',
+    'H',
+    'T',
+    'G',
+    'Î',
+    'T.Y',
+    'T.D',
+    'Ç'
+  ],
+  'STANDALONENARROWMONTHS': [
+    'R.P',
+    'R.D',
+    'A',
+    'N',
+    'G',
+    'H',
+    'T',
+    'G',
+    'Î',
+    'T.Y',
+    'T.D',
+    'Ç'
+  ],
+  'MONTHS': [
+    'Rêbendan',
+    'Reşemî',
+    'Adar',
+    'Nîsan',
+    'Gulan',
+    'Hezîran',
+    'Tîrmeh',
+    'Gelawêj',
+    'Îlon',
+    'Tişrîna Yekem',
+    'Tişrîna Duyem',
+    'Çiriya Pêşîn',
+  ],
+  'STANDALONEMONTHS': [
+    'Rêbendan',
+    'Reşemî',
+    'Adar',
+    'Nîsan',
+    'Gulan',
+    'Hezîran',
+    'Tîrmeh',
+    'Gelawêj',
+    'Îlon',
+    'Tişrîna Yekem',
+    'Tişrîna Duyem',
+    'Çiriya Pêşîn',
+  ],
+  'SHORTMONTHS': [
+    'Rêb',
+    'Reş',
+    'Ada',
+    'Nîs',
+    'Gul',
+    'Hez',
+    'Tîr',
+    'Gel',
+    'Îlo',
+    'T.Y',
+    'T.D',
+    'Çir',
+  ],
+  'STANDALONESHORTMONTHS': [
+    'Rêb',
+    'Reş',
+    'Ada',
+    'Nîs',
+    'Gul',
+    'Hez',
+    'Tîr',
+    'Gel',
+    'Îlo',
+    'T.Y',
+    'T.D',
+    'Çir',
+  ],
+  'WEEKDAYS': [
+    'Yekşem',
+    'Duşem',
+    'Sêşem',
+    'Çarşem',
+    'Pêncşem',
+    'În',
+    'Şemî'
+  ],
+  'STANDALONEWEEKDAYS': [
+    'Yekşem',
+    'Duşem',
+    'Sêşem',
+    'Çarşem',
+    'Pêncşem',
+    'În',
+    'Şemî'
+  ],
+  'SHORTWEEKDAYS': [
+    'Yek',
+    'Du',
+    'Sê',
+    'Çar',
+    'Pênc',
+    'În',
+    'Şem'
+  ],
+  'STANDALONESHORTWEEKDAYS': [
+    'Yek',
+    'Du',
+    'Sê',
+    'Çar',
+    'Pênc',
+    'În',
+    'Şem'
+  ],
+  'NARROWWEEKDAYS': ['Y', 'D', 'S', 'Ç', 'P', 'Î', 'Ş'],
+  'STANDALONENARROWWEEKDAYS': ['Y', 'D', 'S', 'Ç', 'P', 'Î', 'Ş'],
+  'SHORTQUARTERS': ['Ç1', 'Ç2', 'Ç3', 'Ç4'],
+  'QUARTERS': ['Çareka Yekem', 'Çareka Duyem', 'Çareka Sêyem', 'Çareka Çarem'],
+  'AMPMS': ['BN', 'PN'],
+  'DATEFORMATS': [
+    'EEEE، d MMMM y',
+    'd MMMM y',
+    'dd‏/MM‏/y',
+    'd‏/M‏/y',
+  ],
+  'TIMEFORMATS': [
+    'h:mm:ss a zzzz',
+    'h:mm:ss a z',
+    'h:mm:ss a',
+    'h:mm a',
+  ],
+  'AVAILABLEFORMATS': null,
+  'DATETIMEFORMATS': [
+    '{1} {0}',
+    '{1} {0}',
+    '{1} {0}',
+    '{1} {0}',
+  ],
+  'ZERODIGIT': '0',
+  'FIRSTDAYOFWEEK': 0,
+  'WEEKENDRANGE': [5, 6],
+  'FIRSTWEEKCUTOFFDAY': 3
+};
+
+const krmCupertinoDatePatterns = {
+  'd': 'd.',
+  'E': 'ccc',
+  'EEEE': 'cccc',
+  'LLL': 'LLL',
+  'LLLL': 'LLLL',
+  'M': 'L.',
+  'Md': 'd.M.',
+  'MEd': 'EEE d.M.',
+  'MMM': 'LLL',
+  'MMMd': 'd. MMM',
+  'MMMEd': 'EEE d. MMM',
+  'MMMM': 'LLLL',
+  'MMMMd': 'd. MMMM',
+  'MMMMEEEEd': 'EEEE d. MMMM',
+  'QQQ': 'QQQ',
+  'QQQQ': 'QQQQ',
+  'y': 'y',
+  'yM': 'M.y',
+  'yMd': 'd.M.y',
+  'yMEd': 'EEE d.MM.y',
+  'yMMM': 'MMM y',
+  'yMMMd': 'd. MMM y',
+  'yMMMEd': 'EEE d. MMM y',
+  'yMMMM': 'MMMM y',
+  'yMMMMd': 'd. MMMM y',
+  'yMMMMEEEEd': 'EEEE d. MMMM y',
+  'yQQQ': 'QQQ y',
+  'yQQQQ': 'QQQQ y',
+  'H': 'HH',
+  'Hm': 'HH:mm',
+  'Hms': 'HH:mm:ss',
+  'j': 'HH',
+  'jm': 'HH:mm',
+  'jms': 'HH:mm:ss',
+  'jmv': 'HH:mm v',
+  'jmz': 'HH:mm z',
+  'jz': 'HH z',
+  'm': 'm',
+  'ms': 'mm:ss',
+  's': 's',
+  'v': 'v',
+  'z': 'z',
+  'zzzz': 'zzzz',
+  'ZZZZ': 'ZZZZ',
+};
+
 // #docregion Delegate
 class KurdishCupertinoLocalizationsDelegate
     extends LocalizationsDelegate<CupertinoLocalizations> {
   const KurdishCupertinoLocalizationsDelegate();
 
   @override
-  bool isSupported(Locale locale) => locale.languageCode == 'ckb';
+  bool isSupported(Locale locale) => 
+      locale.languageCode == 'ckb' || locale.languageCode == 'krm';
 
   @override
   Future<CupertinoLocalizations> load(Locale locale) async {
     final String localeName = intl.Intl.canonicalizedLocale(locale.toString());
-    // The locale (in this case `nn`) needs to be initialized into the custom
+    // The locale (in this case `ckb` or `krm`) needs to be initialized into the custom
     // date symbols and patterns setup that Flutter uses.
     date_symbol_data_custom.initializeDateFormattingCustom(
       locale: localeName,
-      patterns: kurdishLocaleDatePatterns,
-      symbols: intl.DateSymbols.deserializeFromMap(kuDateSymbols2),
+      patterns: locale.languageCode == 'krm' ? krmCupertinoDatePatterns : kurdishLocaleDatePatterns,
+      symbols: intl.DateSymbols.deserializeFromMap(
+          locale.languageCode == 'krm' ? krmCupertinoDateSymbols : kuDateSymbols2),
     );
 
     return SynchronousFuture<CupertinoLocalizations>(
@@ -284,7 +488,8 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
     required intl.DateFormat singleDigitMinuteFormat,
     required intl.DateFormat singleDigitSecondFormat,
     required intl.DateFormat weekdayFormat,
-  }) : super(
+  }) : _localeName = localeName,
+        super(
           localeName: localeName,
           fullYearFormat: fullYearFormat,
           mediumDateFormat: mediumDateFormat,
@@ -297,33 +502,36 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
           weekdayFormat: weekdayFormat,
         );
 
+  final String _localeName;
+  bool get _isKrm => _localeName == 'krm';
+
 // #docregion Getters
 
   @override
-  String get alertDialogLabel => r'ئاگادارکردنەوە';
+  String get alertDialogLabel => _isKrm ? r'Hişyarî' : r'ئاگادارکردنەوە';
 
 // #enddocregion Getters
 
   @override
-  String get anteMeridiemAbbreviation => r'پ.ن';
+  String get anteMeridiemAbbreviation => _isKrm ? r'BN' : r'پ.ن';
 
   @override
-  String get copyButtonLabel => r'کۆپی';
+  String get copyButtonLabel => _isKrm ? r'Jêber bike' : r'کۆپی';
 
   @override
-  String get cutButtonLabel => r'بڕین';
+  String get cutButtonLabel => _isKrm ? r'Jê bibe' : r'بڕین';
 
   @override
-  String get modalBarrierDismissLabel => r'لادان';
+  String get modalBarrierDismissLabel => _isKrm ? r'Betal bike' : r'لادان';
 
   @override
-  String get pasteButtonLabel => r'پەیست';
+  String get pasteButtonLabel => _isKrm ? r'Pêve bike' : r'پەیست';
 
   @override
-  String get postMeridiemAbbreviation => r'د.ن';
+  String get postMeridiemAbbreviation => _isKrm ? r'PN' : r'د.ن';
 
   @override
-  String get selectAllButtonLabel => r'دیاریکردنی هەموو';
+  String get selectAllButtonLabel => _isKrm ? r'Hemûyan hilbijêre' : r'دیاریکردنی هەموو';
 
   static const LocalizationsDelegate<CupertinoLocalizations> delegate =
       KurdishCupertinoLocalizationsDelegate();

@@ -12,19 +12,22 @@ class _KurdishMaterialLocalizationsDelegate
   const _KurdishMaterialLocalizationsDelegate();
 
   @override
-  bool isSupported(Locale locale) => locale.languageCode == 'ckb';
+  bool isSupported(Locale locale) => 
+      locale.languageCode == 'ckb' || locale.languageCode == 'krm';
 
   @override
   Future<MaterialLocalizations> load(Locale locale) async {
-    const String localeName = 'ckb';
+    final String localeName = locale.languageCode;
 
     date_symbol_data_custom.initializeDateFormattingCustom(
       locale: localeName,
-      patterns: kuLocaleDatePatterns,
-      symbols: intl.DateSymbols.deserializeFromMap(kuDateSymbols),
+      patterns: localeName == 'krm' ? krmLocaleDatePatterns : kuLocaleDatePatterns,
+      symbols: intl.DateSymbols.deserializeFromMap(
+          localeName == 'krm' ? krmDateSymbols : kuDateSymbols),
     );
     return SynchronousFuture<MaterialLocalizations>(
       KurdishMaterialLocalizations(
+        localeName: localeName,
         fullYearFormat: intl.DateFormat('y', localeName),
         shortDateFormat: intl.DateFormat('MM/DD/YY', localeName),
         compactDateFormat: intl.DateFormat('EEE, MMM d', localeName),
@@ -60,7 +63,8 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
     required intl.DateFormat yearMonthFormat,
     required intl.NumberFormat decimalFormat,
     required intl.NumberFormat twoDigitZeroPaddedFormat,
-  }) : super(
+  }) : _localeName = localeName,
+        super(
             localeName: localeName,
             shortDateFormat: shortDateFormat,
             compactDateFormat: compactDateFormat,
@@ -71,44 +75,51 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
             yearMonthFormat: yearMonthFormat,
             decimalFormat: decimalFormat,
             twoDigitZeroPaddedFormat: twoDigitZeroPaddedFormat);
+
+  final String _localeName;
+  bool get _isKrm => _localeName == 'krm';
   static const LocalizationsDelegate<MaterialLocalizations> delegate =
       _KurdishMaterialLocalizationsDelegate();
 
   @override
-  String get aboutListTileTitleRaw => 'دەربارەی \$applicationName';
+  String get aboutListTileTitleRaw => _isKrm 
+      ? 'Der barê \$applicationName de' 
+      : 'دەربارەی \$applicationName';
 
   @override
-  String get alertDialogLabel => 'ئاگادارکردنەوە';
+  String get alertDialogLabel => _isKrm ? 'Hişyarî' : 'ئاگادارکردنەوە';
 
   @override
-  String get anteMeridiemAbbreviation => 'پ.ن';
+  String get anteMeridiemAbbreviation => _isKrm ? 'BN' : 'پ.ن';
 
   @override
-  String get backButtonTooltip => 'دواوە';
+  String get backButtonTooltip => _isKrm ? 'Vegere' : 'دواوە';
 
   @override
-  String get calendarModeButtonLabel => 'گۆڕین بۆ ڕۆژژمێر';
+  String get calendarModeButtonLabel => _isKrm 
+      ? 'Biçe nav salnameye' 
+      : 'گۆڕین بۆ ڕۆژژمێر';
 
   @override
-  String get cancelButtonLabel => 'هەڵوەشاندنەوه';
+  String get cancelButtonLabel => _isKrm ? 'Betal bike' : 'هەڵوەشاندنەوه';
 
   @override
-  String get closeButtonLabel => 'داخستن';
+  String get closeButtonLabel => _isKrm ? 'Bigire' : 'داخستن';
 
   @override
-  String get closeButtonTooltip => 'داخستن';
+  String get closeButtonTooltip => _isKrm ? 'Bigire' : 'داخستن';
 
   @override
-  String get collapsedIconTapHint => 'فراوانکردن';
+  String get collapsedIconTapHint => _isKrm ? 'Fireh bike' : 'فراوانکردن';
 
   @override
-  String get continueButtonLabel => 'بەردەوام بە';
+  String get continueButtonLabel => _isKrm ? 'Bidom' : 'بەردەوام بە';
 
   @override
-  String get copyButtonLabel => 'کۆپی';
+  String get copyButtonLabel => _isKrm ? 'Jêber bike' : 'کۆپی';
 
   @override
-  String get cutButtonLabel => 'بڕین';
+  String get cutButtonLabel => _isKrm ? 'Jê bibe' : 'بڕین';
 
   @override
   String get dateHelpText => 'mm/dd/yyyy';
@@ -199,7 +210,7 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String get nextPageTooltip => 'لاپەڕەی داهاتوو';
 
   @override
-  String get okButtonLabel => 'باشه';
+  String get okButtonLabel => _isKrm ? 'Temam' : 'باشه';
 
   @override
   String get openAppDrawerTooltip => 'کردنەوەی لیستی ڕێنیشاندەر';
@@ -727,6 +738,208 @@ const kuDateSymbols = {
   'FIRSTWEEKCUTOFFDAY': 3
 };
 const kuLocaleDatePatterns = {
+  'd': 'd', // DAY
+  'E': 'ccc', // ABBR_WEEKDAY
+  'EEEE': 'cccc', // WEEKDAY
+  'LLL': 'LLL', // ABBR_STANDALONE_MONTH
+  'LLLL': 'LLLL', // STANDALONE_MONTH
+  'M': 'L', // NUM_MONTH
+  'Md': 'd/‏M', // NUM_MONTH_DAY
+  'MEd': 'EEE، d/M', // NUM_MONTH_WEEKDAY_DAY
+  'MMM': 'LLL', // ABBR_MONTH
+  'MMMd': 'd MMM', // ABBR_MONTH_DAY
+  'MMMEd': 'EEE، d MMM', // ABBR_MONTH_WEEKDAY_DAY
+  'MMMM': 'LLLL', // MONTH
+  'MMMMd': 'd MMMM', // MONTH_DAY
+  'MMMMEEEEd': 'EEEE، d MMMM', // MONTH_WEEKDAY_DAY
+  'QQQ': 'QQQ', // ABBR_QUARTER
+  'QQQQ': 'QQQQ', // QUARTER
+  'y': 'y', // YEAR
+  'yM': 'M‏/y', // YEAR_NUM_MONTH
+  'yMd': 'd‏/M‏/y', // YEAR_NUM_MONTH_DAY
+  'yMEd': 'EEE، d/‏M/‏y', // YEAR_NUM_MONTH_WEEKDAY_DAY
+  'yMMM': 'MMM y', // YEAR_ABBR_MONTH
+  'yMMMd': 'd MMM y', // YEAR_ABBR_MONTH_DAY
+  'yMMMEd': 'EEE، d MMM y', // YEAR_ABBR_MONTH_WEEKDAY_DAY
+  'yMMMM': 'MMMM y', // YEAR_MONTH
+  'yMMMMd': 'd MMMM y', // YEAR_MONTH_DAY
+  'yMMMMEEEEd': 'EEEE، d MMMM y', // YEAR_MONTH_WEEKDAY_DAY
+  'yQQQ': 'QQQ y', // YEAR_ABBR_QUARTER
+  'yQQQQ': 'QQQQ y', // YEAR_QUARTER
+  'H': 'HH', // HOUR24
+  'Hm': 'HH:mm', // HOUR24_MINUTE
+  'Hms': 'HH:mm:ss', // HOUR24_MINUTE_SECOND
+  'j': 'h a', // HOUR
+  'jm': 'h:mm a', // HOUR_MINUTE
+  'jms': 'h:mm:ss a', // HOUR_MINUTE_SECOND
+  'jmv': 'h:mm a v', // HOUR_MINUTE_GENERIC_TZ
+  'jmz': 'h:mm a z', // HOUR_MINUTETZ
+  'jz': 'h a z', // HOURGENERIC_TZ
+  'm': 'm', // MINUTE
+  'ms': 'mm:ss', // MINUTE_SECOND
+  's': 's', // SECOND
+  'v': 'v', // ABBR_GENERIC_TZ
+  'z': 'z', // ABBR_SPECIFIC_TZ
+  'zzzz': 'zzzz', // SPECIFIC_TZ
+  'ZZZZ': 'ZZZZ' // ABBR_UTC_TZ
+};
+
+// KRM (Kurmanji) Date Symbols
+const krmDateSymbols = {
+  'NAME': 'krm',
+  'ERAS': ['BZ', 'PZ'],
+  'ERANAMES': ['Berî Zayînê', 'Piştî Zayînê'],
+  'NARROWMONTHS': [
+    'R.P',
+    'R.D',
+    'A',
+    'N',
+    'G',
+    'H',
+    'T',
+    'G',
+    'Î',
+    'T.Y',
+    'T.D',
+    'Ç'
+  ],
+  'STANDALONENARROWMONTHS': [
+    'R.P',
+    'R.D',
+    'A',
+    'N',
+    'G',
+    'H',
+    'T',
+    'G',
+    'Î',
+    'T.Y',
+    'T.D',
+    'Ç'
+  ],
+  'MONTHS': [
+    'Rêbendan',
+    'Reşemî',
+    'Adar',
+    'Nîsan',
+    'Gulan',
+    'Hezîran',
+    'Tîrmeh',
+    'Gelawêj',
+    'Îlon',
+    'Tişrîna Yekem',
+    'Tişrîna Duyem',
+    'Çiriya Pêşîn',
+  ],
+  'STANDALONEMONTHS': [
+    'Rêbendan',
+    'Reşemî',
+    'Adar',
+    'Nîsan',
+    'Gulan',
+    'Hezîran',
+    'Tîrmeh',
+    'Gelawêj',
+    'Îlon',
+    'Tişrîna Yekem',
+    'Tişrîna Duyem',
+    'Çiriya Pêşîn',
+  ],
+  'SHORTMONTHS': [
+    'Rêb',
+    'Reş',
+    'Ada',
+    'Nîs',
+    'Gul',
+    'Hez',
+    'Tîr',
+    'Gel',
+    'Îlo',
+    'T.Y',
+    'T.D',
+    'Çir',
+  ],
+  'STANDALONESHORTMONTHS': [
+    'Rêb',
+    'Reş',
+    'Ada',
+    'Nîs',
+    'Gul',
+    'Hez',
+    'Tîr',
+    'Gel',
+    'Îlo',
+    'T.Y',
+    'T.D',
+    'Çir',
+  ],
+  'WEEKDAYS': [
+    'Yekşem',
+    'Duşem',
+    'Sêşem',
+    'Çarşem',
+    'Pêncşem',
+    'În',
+    'Şemî'
+  ],
+  'STANDALONEWEEKDAYS': [
+    'Yekşem',
+    'Duşem',
+    'Sêşem',
+    'Çarşem',
+    'Pêncşem',
+    'În',
+    'Şemî'
+  ],
+  'SHORTWEEKDAYS': [
+    'Yek',
+    'Du',
+    'Sê',
+    'Çar',
+    'Pênc',
+    'În',
+    'Şem'
+  ],
+  'STANDALONESHORTWEEKDAYS': [
+    'Yek',
+    'Du',
+    'Sê',
+    'Çar',
+    'Pênc',
+    'În',
+    'Şem'
+  ],
+  'NARROWWEEKDAYS': ['Y', 'D', 'S', 'Ç', 'P', 'Î', 'Ş'],
+  'STANDALONENARROWWEEKDAYS': ['Y', 'D', 'S', 'Ç', 'P', 'Î', 'Ş'],
+  'SHORTQUARTERS': ['Ç1', 'Ç2', 'Ç3', 'Ç4'],
+  'QUARTERS': ['Çareka Yekem', 'Çareka Duyem', 'Çareka Sêyem', 'Çareka Çarem'],
+  'AMPMS': ['BN', 'PN'],
+  'DATEFORMATS': [
+    'EEEE، d MMMM y',
+    'd MMMM y',
+    'dd‏/MM‏/y',
+    'd‏/M‏/y',
+  ],
+  'TIMEFORMATS': [
+    'h:mm:ss a zzzz',
+    'h:mm:ss a z',
+    'h:mm:ss a',
+    'h:mm a',
+  ],
+  'AVAILABLEFORMATS': null,
+  'DATETIMEFORMATS': [
+    '{1} {0}',
+    '{1} {0}',
+    '{1} {0}',
+    '{1} {0}',
+  ],
+  'ZERODIGIT': '0',
+  'FIRSTDAYOFWEEK': 0,
+  'WEEKENDRANGE': [5, 6],
+  'FIRSTWEEKCUTOFFDAY': 3
+};
+
+const krmLocaleDatePatterns = {
   'd': 'd', // DAY
   'E': 'ccc', // ABBR_WEEKDAY
   'EEEE': 'cccc', // WEEKDAY

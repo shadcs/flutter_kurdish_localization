@@ -9,12 +9,13 @@ class _KurdishMaterialLocalizationsDelegate
   const _KurdishMaterialLocalizationsDelegate();
 
   @override
-  bool isSupported(Locale locale) => locale.languageCode == 'ckb';
+  bool isSupported(Locale locale) => 
+      locale.languageCode == 'ckb' || locale.languageCode == 'krm';
 
   @override
   Future<WidgetsLocalizations> load(Locale locale) async {
     return SynchronousFuture<WidgetsLocalizations>(
-      KurdishWidgetLocalizations(),
+      KurdishWidgetLocalizations(localeName: locale.languageCode),
     );
   }
 
@@ -23,6 +24,11 @@ class _KurdishMaterialLocalizationsDelegate
 }
 
 class KurdishWidgetLocalizations extends WidgetsLocalizations {
+  KurdishWidgetLocalizations({this.localeName = 'ckb'});
+  
+  final String localeName;
+  bool get _isKrm => localeName == 'krm';
+  
   static const LocalizationsDelegate<WidgetsLocalizations> delegate =
       _KurdishMaterialLocalizationsDelegate();
 
@@ -30,16 +36,16 @@ class KurdishWidgetLocalizations extends WidgetsLocalizations {
   TextDirection get textDirection => TextDirection.rtl;
 
   @override
-  String get copyButtonLabel => 'کۆپی';
+  String get copyButtonLabel => _isKrm ? 'Jêber bike' : 'کۆپی';
 
   @override
-  String get cutButtonLabel => 'بڕین';
+  String get cutButtonLabel => _isKrm ? 'Jê bibe' : 'بڕین';
 
   @override
-  String get pasteButtonLabel => 'پەیست';
+  String get pasteButtonLabel => _isKrm ? 'Pêve bike' : 'پەیست';
 
   @override
-  String get selectAllButtonLabel => 'دیاریکردنی هەموو';
+  String get selectAllButtonLabel => _isKrm ? 'Hemûyan hilbijêre' : 'دیاریکردنی هەموو';
 
   @override
   String get lookUpButtonLabel => 'بە دوادا گەڕان';

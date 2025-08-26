@@ -23,9 +23,10 @@ class MyApp extends StatelessWidget {
       ],
       supportedLocales: const [
         Locale('en', 'US'),
-        Locale('ckb', 'IQ'), // Kurdish
+        Locale('ckb', 'IQ'), // Central Kurdish (Sorani)
+        Locale('krm', 'TR'), // Kurmanji
       ],
-      locale: const Locale('ckb', 'IQ'),
+      locale: const Locale('ckb', 'IQ'), // Default to Central Kurdish
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
