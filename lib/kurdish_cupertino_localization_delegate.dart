@@ -537,57 +537,58 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
       KurdishCupertinoLocalizationsDelegate();
 
   @override
-  String get datePickerDateOrderString => "هەڵبژاردنی بەروار";
+  String get datePickerDateOrderString => _isKrm ? "Hilbijartina dîrokê" : "هەڵبژاردنی بەروار";
 
   @override
-  String get datePickerDateTimeOrderString => "کات هەڵبژێرە";
+  String get datePickerDateTimeOrderString => _isKrm ? "Dem hilbijêre" : "کات هەڵبژێرە";
 
   @override
-  String? get datePickerHourSemanticsLabelOther => "کاتژمێری هەڵبژاردنی بەروار";
+  String? get datePickerHourSemanticsLabelOther => _isKrm ? "Demjimêrî hilbijartina dîrokê" : "کاتژمێری هەڵبژاردنی بەروار";
 
   @override
-  String? get datePickerMinuteSemanticsLabelOther => "خولەکی هەڵبژاردنی بەروار";
+  String? get datePickerMinuteSemanticsLabelOther => _isKrm ? "Deqîqeyî hilbijartina dîrokê" : "خولەکی هەڵبژاردنی بەروار";
 
   @override
-  String get searchTextFieldPlaceholderLabel => "گەڕان";
+  String get searchTextFieldPlaceholderLabel => _isKrm ? "Lêgerîn" : "گەڕان";
 
   @override
-  String get tabSemanticsLabelRaw => "ماناسازی تاب";
+  String get tabSemanticsLabelRaw => _isKrm ? "Manasaziya tab" : "ماناسازی تاب";
 
   @override
-  String? get timerPickerHourLabelOther => "هەڵبژێرەری کاتژمێر";
+  String? get timerPickerHourLabelOther => _isKrm ? "Hilbijêreri demjimêr" : "هەڵبژێرەری کاتژمێر";
 
   @override
-  String? get timerPickerMinuteLabelOther => "هەڵبژێرەری خولەک";
+  String? get timerPickerMinuteLabelOther => _isKrm ? "Hilbijêreri deqîqe" : "هەڵبژێرەری خولەک";
 
   @override
-  String? get timerPickerSecondLabelOther => "هەڵبژێرەری چرکە";
+  String? get timerPickerSecondLabelOther => _isKrm ? "Hilbijêreri çirke" : "هەڵبژێرەری چرکە";
 
   @override
-  String get todayLabel => "ئەمڕۆ";
+  String get todayLabel => _isKrm ? "Îro" : "ئەمڕۆ";
 
   @override
-  String get noSpellCheckReplacementsLabel =>
-      "هیچ جێگرەوەیەکی پشکنینی ڕێنووسی نییە";
+  String get noSpellCheckReplacementsLabel => _isKrm
+      ? "Tu guherîneyek kontrola rênivîsê nîye"
+      : "هیچ جێگرەوەیەکی پشکنینی ڕێنووسی نییە";
 
   @override
-  String get lookUpButtonLabel => 'بە دوادا گەڕان';
+  String get lookUpButtonLabel => _isKrm ? 'Li dû da gerrîn' : 'بە دوادا گەڕان';
 
   @override
-  String get menuDismissLabel => 'بەلاوە نان';
+  String get menuDismissLabel => _isKrm ? 'Menû belav bike' : 'بەلاوە نان';
 
   @override
-  String get searchWebButtonLabel => 'گەڕان لە وێب';
+  String get searchWebButtonLabel => _isKrm ? 'Li wêbê bigere' : 'گەڕان لە وێب';
 
   @override
-  String get shareButtonLabel => 'هاوبەشکردن';
+  String get shareButtonLabel => _isKrm ? 'Hevparkirinê' : 'هاوبەشکردن';
 
   @override
   String get clearButtonLabel => "";
 
   @override
-  String get backButtonLabel => 'گەڕان';
+  String get backButtonLabel => _isKrm ? 'Vegere' : 'گەڕان';
 
   @override
-  String get cancelButtonLabel => 'هەڵوەشاندنەوە';
+  String get cancelButtonLabel => _isKrm ? 'Betal bike' : 'هەڵوەشاندنەوە';
 }

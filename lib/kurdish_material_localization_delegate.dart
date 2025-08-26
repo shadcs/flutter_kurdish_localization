@@ -122,123 +122,137 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String get cutButtonLabel => _isKrm ? 'Jê bibe' : 'بڕین';
 
   @override
-  String get dateHelpText => 'mm/dd/yyyy';
+  String get dateHelpText => _isKrm ? 'dd/mm/yyyy' : 'mm/dd/yyyy';
 
   @override
-  String get dateInputLabel => 'بەروار بنووسە';
+  String get dateInputLabel => _isKrm ? 'Dîrok binivîse' : 'بەروار بنووسە';
 
   @override
-  String get dateOutOfRangeLabel => 'دەرەوەی مەودایە';
+  String get dateOutOfRangeLabel => _isKrm ? 'Derveyî sînorê' : 'دەرەوەی مەودایە';
 
   @override
-  String get datePickerHelpText => 'بەروار دیاری بکە';
+  String get datePickerHelpText => _isKrm ? 'Dîrok hilbijêre' : 'بەروار دیاری بکە';
 
   @override
-  String get dateRangeEndDateSemanticLabelRaw => 'بەرواری کۆتایی \$fullDate';
+  String get dateRangeEndDateSemanticLabelRaw => _isKrm 
+      ? 'Dîroka dawîbûnê \$fullDate' 
+      : 'بەرواری کۆتایی \$fullDate';
 
   @override
-  String get dateRangeEndLabel => 'بەرواری کۆتایی';
+  String get dateRangeEndLabel => _isKrm ? 'Dîroka dawîbûnê' : 'بەرواری کۆتایی';
 
   @override
-  String get dateRangePickerHelpText => 'دەست نیشانکردنی مەودا';
+  String get dateRangePickerHelpText => _isKrm ? 'Nîşankirina mîqdarê' : 'دەست نیشانکردنی مەودا';
 
   @override
-  String get dateRangeStartDateSemanticLabelRaw =>
-      'بەرواری دەستپێکردن \$fullDate';
+  String get dateRangeStartDateSemanticLabelRaw => _isKrm
+      ? 'Dîroka destpêkirinê \$fullDate'
+      : 'بەرواری دەستپێکردن \$fullDate';
 
   @override
-  String get dateRangeStartLabel => 'بەرواری دەستپێکردن';
+  String get dateRangeStartLabel => _isKrm ? 'Dîroka destpêkirinê' : 'بەرواری دەستپێکردن';
 
   @override
   String get dateSeparator => '/';
 
   @override
-  String get deleteButtonTooltip => 'سڕینەوە';
+  String get deleteButtonTooltip => _isKrm ? 'Jê bibe' : 'سڕینەوە';
 
   @override
-  String get dialModeButtonLabel => 'گۆڕین بۆ دۆخی هەڵبژێری داواکردن';
+  String get dialModeButtonLabel => _isKrm 
+      ? 'Biçe nav moda hilbijêrê daxwazkirinê' 
+      : 'گۆڕین بۆ دۆخی هەڵبژێری داواکردن';
 
   @override
-  String get dialogLabel => 'دیالۆگ';
+  String get dialogLabel => _isKrm ? 'Diyalog' : 'دیالۆگ';
 
   @override
-  String get drawerLabel => 'لیستی ڕێنیشاندەر';
+  String get drawerLabel => _isKrm ? 'Lîsteya rêberiyê' : 'لیستی ڕێنیشاندەر';
 
   @override
-  String get expandedIconTapHint => 'نوشتانەوە';
+  String get expandedIconTapHint => _isKrm ? 'Biçûk bike' : 'نوشتانەوە';
 
   @override
-  String get hideAccountsLabel => 'شاردنەوەی ئەژمێرەکان';
+  String get hideAccountsLabel => _isKrm ? 'Ajimêran veşêre' : 'شاردنەوەی ئەژمێرەکان';
 
   @override
-  String get inputDateModeButtonLabel => 'گۆڕین بۆ نووسین';
+  String get inputDateModeButtonLabel => _isKrm ? 'Biçe nav nivîsandinê' : 'گۆڕین بۆ نووسین';
 
   @override
-  String get inputTimeModeButtonLabel => 'گۆڕین بۆ دۆخی تێکردنی دەق';
+  String get inputTimeModeButtonLabel => _isKrm 
+      ? 'Biçe nav moda têkirdina deqê' 
+      : 'گۆڕین بۆ دۆخی تێکردنی دەق';
 
   @override
-  String get invalidDateFormatLabel => 'فۆرماتی نادروست.';
+  String get invalidDateFormatLabel => _isKrm ? 'Format şaş e.' : 'فۆرماتی نادروست.';
 
   @override
-  String get invalidDateRangeLabel => 'مەودایەکی نادروست.';
+  String get invalidDateRangeLabel => _isKrm ? 'Mîqdarek şaş.' : 'مەودایەکی نادروست.';
 
   @override
-  String get invalidTimeLabel => 'کاتێکی دروست بنووسە';
+  String get invalidTimeLabel => _isKrm ? 'Demek rast binivîse' : 'کاتێکی دروست بنووسە';
 
   @override
-  String get licensesPackageDetailTextOne => '١ مۆڵەت';
+  String get licensesPackageDetailTextOne => _isKrm ? '1 lîsans' : '١ مۆڵەت';
 
   @override
-  String get licensesPackageDetailTextOther => '\$licenseCount مۆڵەت';
+  String get licensesPackageDetailTextOther => _isKrm 
+      ? '\$licenseCount lîsans' 
+      : '\$licenseCount مۆڵەت';
 
   @override
-  String get licensesPackageDetailTextZero => 'مۆڵەت نیە';
+  String get licensesPackageDetailTextZero => _isKrm ? 'Lîsans nîne' : 'مۆڵەت نیە';
 
   @override
-  String get licensesPageTitle => 'مۆڵەتەکان';
+  String get licensesPageTitle => _isKrm ? 'Lîsansan' : 'مۆڵەتەکان';
 
   @override
-  String get modalBarrierDismissLabel => 'دەرکردن';
+  String get modalBarrierDismissLabel => _isKrm ? 'Derxe' : 'دەرکردن';
 
   @override
-  String get moreButtonTooltip => 'زیاتر';
+  String get moreButtonTooltip => _isKrm ? 'Bêtir' : 'زیاتر';
 
   @override
-  String get nextMonthTooltip => 'مانگی داهاتوو';
+  String get nextMonthTooltip => _isKrm ? 'Meha pêş' : 'مانگی داهاتوو';
 
   @override
-  String get nextPageTooltip => 'لاپەڕەی داهاتوو';
+  String get nextPageTooltip => _isKrm ? 'Rûpela pêş' : 'لاپەڕەی داهاتوو';
 
   @override
   String get okButtonLabel => _isKrm ? 'Temam' : 'باشه';
 
   @override
-  String get openAppDrawerTooltip => 'کردنەوەی لیستی ڕێنیشاندەر';
+  String get openAppDrawerTooltip => _isKrm 
+      ? 'Lîsteya rêberiyê veke' 
+      : 'کردنەوەی لیستی ڕێنیشاندەر';
 
   @override
-  String get pageRowsInfoTitleRaw => '\$firstRow–\$lastRow لە \$rowCount';
+  String get pageRowsInfoTitleRaw => _isKrm 
+      ? '\$firstRow–\$lastRow ji \$rowCount' 
+      : '\$firstRow–\$lastRow لە \$rowCount';
 
   @override
-  String get pageRowsInfoTitleApproximateRaw =>
-      '\$firstRow–\$lastRow تا \$rowCount';
+  String get pageRowsInfoTitleApproximateRaw => _isKrm
+      ? '\$firstRow–\$lastRow heta \$rowCount'
+      : '\$firstRow–\$lastRow تا \$rowCount';
 
   @override
-  String get pasteButtonLabel => 'پەیست';
+  String get pasteButtonLabel => _isKrm ? 'Pêve bike' : 'پەیست';
 
   @override
-  String get popupMenuLabel => 'لیستی دەرکەوتە';
+  String get popupMenuLabel => _isKrm ? 'Lîsteya derketî' : 'لیستی دەرکەوتە';
 
   @override
-  String get postMeridiemAbbreviation => 'د.ن';
+  String get postMeridiemAbbreviation => _isKrm ? 'PN' : 'د.ن';
 
   @override
-  String get previousMonthTooltip => 'مانگی پێشوو';
+  String get previousMonthTooltip => _isKrm ? 'Meha berê' : 'مانگی پێشوو';
 
   @override
-  String get previousPageTooltip => 'لاپەڕەی پێشوو';
+  String get previousPageTooltip => _isKrm ? 'Rûpela berê' : 'لاپەڕەی پێشوو';
 
   @override
-  String get refreshIndicatorSemanticLabel => 'نوێکردنەوە';
+  String get refreshIndicatorSemanticLabel => _isKrm ? 'Nûkirinê' : 'نوێکردنەوە';
 
   @override
   String? get remainingTextFieldCharacterCountFew => null;
@@ -250,53 +264,56 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String? get remainingTextFieldCharacterCountMany => null;
 
   @override
-  String get remainingTextFieldCharacterCountOne => '١ پیت ماوە';
+  String get remainingTextFieldCharacterCountOne => _isKrm ? '1 tîp maye' : '١ پیت ماوە';
 
   @override
-  String get remainingTextFieldCharacterCountOther =>
-      '\$remainingCount پیتەکان ماون';
+  String get remainingTextFieldCharacterCountOther => _isKrm
+      ? '\$remainingCount tîp mane'
+      : '\$remainingCount پیتەکان ماون';
 
   @override
   String? get remainingTextFieldCharacterCountTwo => null;
 
   @override
-  String get remainingTextFieldCharacterCountZero => 'هیچ پیتێک نەماوەتەوە';
+  String get remainingTextFieldCharacterCountZero => _isKrm 
+      ? 'Tu tîpek nemaye' 
+      : 'هیچ پیتێک نەماوەتەوە';
 
   @override
-  String get reorderItemDown => 'بڕۆ خوارەوە';
+  String get reorderItemDown => _isKrm ? 'Biçe jêr' : 'بڕۆ خوارەوە';
 
   @override
-  String get reorderItemLeft => 'بڕۆ لای چەپ';
+  String get reorderItemLeft => _isKrm ? 'Biçe çep' : 'بڕۆ لای چەپ';
 
   @override
-  String get reorderItemRight => 'بڕۆ لای راست';
+  String get reorderItemRight => _isKrm ? 'Biçe rast' : 'بڕۆ لای راست';
 
   @override
-  String get reorderItemToEnd => 'بڕۆ کۆتایی';
+  String get reorderItemToEnd => _isKrm ? 'Biçe dawîyê' : 'بڕۆ کۆتایی';
 
   @override
-  String get reorderItemToStart => 'بڕۆ سەرەتا';
+  String get reorderItemToStart => _isKrm ? 'Biçe destpêkê' : 'بڕۆ سەرەتا';
 
   @override
-  String get reorderItemUp => 'بڕۆ سەرەوە';
+  String get reorderItemUp => _isKrm ? 'Biçe jor' : 'بڕۆ سەرەوە';
 
   @override
-  String get rowsPerPageTitle => 'ڕیزەکان بۆ هەر پەڕەیەک:';
+  String get rowsPerPageTitle => _isKrm ? 'Rêz bo her rûpelê:' : 'ڕیزەکان بۆ هەر پەڕەیەک:';
 
   @override
-  String get saveButtonLabel => 'هەڵگرتن';
+  String get saveButtonLabel => _isKrm ? 'Tomar bike' : 'هەڵگرتن';
 
   @override
   ScriptCategory get scriptCategory => ScriptCategory.tall;
 
   @override
-  String get searchFieldLabel => 'گەڕان';
+  String get searchFieldLabel => _isKrm ? 'Lêgerîn' : 'گەڕان';
 
   @override
-  String get selectAllButtonLabel => 'هەموو هەڵبژێرە';
+  String get selectAllButtonLabel => _isKrm ? 'Hemûyan hilbijêre' : 'هەموو هەڵبژێرە';
 
   @override
-  String get selectYearSemanticsLabel => 'ساڵ هەڵبژێرە';
+  String get selectYearSemanticsLabel => _isKrm ? 'Sal hilbijêre' : 'ساڵ هەڵبژێرە';
 
   @override
   String? get selectedRowCountTitleFew => null;
@@ -305,64 +322,68 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String? get selectedRowCountTitleMany => null;
 
   @override
-  String get selectedRowCountTitleOne => '١ دانە هەڵبژێردرا';
+  String get selectedRowCountTitleOne => _isKrm ? '1 dane hilbijartî' : '١ دانە هەڵبژێردرا';
 
   @override
-  String get selectedRowCountTitleOther => '\$selectedRowCount هەڵبژێردراو';
+  String get selectedRowCountTitleOther => _isKrm 
+      ? '\$selectedRowCount hilbijartî' 
+      : '\$selectedRowCount هەڵبژێردراو';
 
   @override
   String? get selectedRowCountTitleTwo => null;
 
   @override
-  String get selectedRowCountTitleZero => 'هیچ هەڵنەبژێراوە';
+  String get selectedRowCountTitleZero => _isKrm ? 'Tu nehatiye hilbijartin' : 'هیچ هەڵنەبژێراوە';
 
   @override
-  String get showAccountsLabel => 'پیشاندانی ئەژمێرەکان';
+  String get showAccountsLabel => _isKrm ? 'Ajimêran nîşan bide' : 'پیشاندانی ئەژمێرەکان';
 
   @override
-  String get showMenuTooltip => 'پیشاندانی پێڕست';
+  String get showMenuTooltip => _isKrm ? 'Menû nîşan bide' : 'پیشاندانی پێڕست';
 
   @override
-  String get signedInLabel => 'چوونە ژوورەوە';
+  String get signedInLabel => _isKrm ? 'Têketiye nav' : 'چوونە ژوورەوە';
 
   @override
-  String get tabLabelRaw => 'خشتەبەندی \$tabIndex لە \$tabCount';
+  String get tabLabelRaw => _isKrm 
+      ? 'Bindestî \$tabIndex ji \$tabCount' 
+      : 'خشتەبەندی \$tabIndex لە \$tabCount';
 
   @override
   TimeOfDayFormat get timeOfDayFormatRaw => TimeOfDayFormat.h_colon_mm_space_a;
 
   @override
-  String get timePickerDialHelpText => 'کات هەڵبژێرە';
+  String get timePickerDialHelpText => _isKrm ? 'Dem hilbijêre' : 'کات هەڵبژێرە';
 
   @override
-  String get timePickerHourLabel => 'کاتژمێر';
+  String get timePickerHourLabel => _isKrm ? 'Demjimêr' : 'کاتژمێر';
 
   @override
-  String get timePickerHourModeAnnouncement => 'کاتژمێر هەڵبژێرە';
+  String get timePickerHourModeAnnouncement => _isKrm ? 'Demjimêr hilbijêre' : 'کاتژمێر هەڵبژێرە';
 
   @override
-  String get timePickerInputHelpText => 'کات بنووسە';
+  String get timePickerInputHelpText => _isKrm ? 'Dem binivîse' : 'کات بنووسە';
 
   @override
-  String get timePickerMinuteLabel => 'خولەک';
+  String get timePickerMinuteLabel => _isKrm ? 'Deqîqe' : 'خولەک';
 
   @override
-  String get timePickerMinuteModeAnnouncement => 'خولەک هەڵبژێرە';
+  String get timePickerMinuteModeAnnouncement => _isKrm ? 'Deqîqe hilbijêre' : 'خولەک هەڵبژێرە';
 
   @override
-  String get unspecifiedDate => 'بەروار';
+  String get unspecifiedDate => _isKrm ? 'Dîrok' : 'بەروار';
 
   @override
-  String get unspecifiedDateRange => 'مەودای بەروار';
+  String get unspecifiedDateRange => _isKrm ? 'Mîqdara dîrokê' : 'مەودای بەروار';
 
   @override
-  String get viewLicensesButtonLabel => 'پیشاندانی مۆڵەتەکان';
+  String get viewLicensesButtonLabel => _isKrm ? 'Lîsansan nîşan bide' : 'پیشاندانی مۆڵەتەکان';
 
   @override
-  String get firstPageTooltip => 'لاپه‌ڕه‌ی سه‌ره‌تا';
+  String get firstPageTooltip => _isKrm ? 'Rûpela yekem' : 'لاپه‌ڕه‌ی سه‌ره‌تا';
 
   @override
-  String get lastPageTooltip => 'دوایین لاپه‌ڕه‌';
+  String get lastPageTooltip => _isKrm ? 'Rûpela dawîn' : 'دوایین لاپه‌ڕه‌';
 
   @override
   String get keyboardKeyAlt => "Alt";
@@ -527,55 +548,55 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String get keyboardKeyZenkakuHankaku => "Zenkaku/Hankaku";
 
   @override
-  String get menuBarMenuLabel => "مینیوی";
+  String get menuBarMenuLabel => _isKrm ? "Lîsteya menûyê" : "مینیوی";
 
   @override
-  String get bottomSheetLabel => 'لاپەڕەی خوارەوە';
+  String get bottomSheetLabel => _isKrm ? 'Rûpela jêrîn' : 'لاپەڕەی خوارەوە';
 
   @override
-  String get currentDateLabel => "بەرواری ئێستا";
+  String get currentDateLabel => _isKrm ? "Dîroka niha" : "بەرواری ئێستا";
 
   @override
-  String get keyboardKeyShift => "گۆڕین";
+  String get keyboardKeyShift => _isKrm ? "Guhertin" : "گۆڕین";
 
   @override
-  String get scrimLabel => 'بەلاوە نان';
+  String get scrimLabel => _isKrm ? 'Belav nan' : 'بەلاوە نان';
 
   @override
-  String get scrimOnTapHintRaw => 'پەنجە بنێ بۆ دەرکردن';
+  String get scrimOnTapHintRaw => _isKrm ? 'Pence binê bo derxistinê' : 'پەنجە بنێ بۆ دەرکردن';
 
   @override
-  String get collapsedHint => 'داڕما';
+  String get collapsedHint => _isKrm ? 'Darma' : 'داڕما';
 
   @override
-  String get expandedHint => 'فراوانتر بوو';
+  String get expandedHint => _isKrm ? 'Firawan bû' : 'فراوانتر بوو';
 
   @override
-  String get expansionTileCollapsedHint => 'داڕما';
+  String get expansionTileCollapsedHint => _isKrm ? 'Darma' : 'داڕما';
 
   @override
-  String get expansionTileCollapsedTapHint => 'بۆ فراوانکردن پەنجە بنێ';
+  String get expansionTileCollapsedTapHint => _isKrm ? 'Bo firawankirinê pence binê' : 'بۆ فراوانکردن پەنجە بنێ';
 
   @override
-  String get expansionTileExpandedHint => 'فراوانتر کراوە';
+  String get expansionTileExpandedHint => _isKrm ? 'Firawan kirawe' : 'فراوانتر کراوە';
 
   @override
-  String get expansionTileExpandedTapHint => 'پەنجە بنێ بۆ ئەوەی فراوانبێت';
+  String get expansionTileExpandedTapHint => _isKrm ? 'Pence binê bo ku firawan bît' : 'پەنجە بنێ بۆ ئەوەی فراوانبێت';
 
   @override
-  String get scanTextButtonLabel => 'دەقی سکانکردن';
+  String get scanTextButtonLabel => _isKrm ? 'Deqa skankirinê' : 'دەقی سکانکردن';
 
   @override
-  String get lookUpButtonLabel => 'بە دوادا گەڕان';
+  String get lookUpButtonLabel => _isKrm ? 'Li dû da gerrîn' : 'بە دوادا گەڕان';
 
   @override
-  String get menuDismissLabel => 'بەلاوە نان';
+  String get menuDismissLabel => _isKrm ? 'Belav nan' : 'بەلاوە نان';
 
   @override
-  String get searchWebButtonLabel => 'گەڕان لە وێب';
+  String get searchWebButtonLabel => _isKrm ? 'Li wêbê bigere' : 'گەڕان لە وێب';
 
   @override
-  String get shareButtonLabel => 'هاوبەشکردن';
+  String get shareButtonLabel => _isKrm ? 'Hevparkirinê' : 'هاوبەشکردن';
 
   @override
   String get clearButtonTooltip => "";

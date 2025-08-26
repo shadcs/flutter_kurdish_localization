@@ -33,7 +33,7 @@ class KurdishWidgetLocalizations extends WidgetsLocalizations {
       _KurdishMaterialLocalizationsDelegate();
 
   @override
-  TextDirection get textDirection => TextDirection.rtl;
+  TextDirection get textDirection => _isKrm ? TextDirection.ltr : TextDirection.rtl;
 
   @override
   String get copyButtonLabel => _isKrm ? 'Jêber bike' : 'کۆپی';
@@ -48,29 +48,29 @@ class KurdishWidgetLocalizations extends WidgetsLocalizations {
   String get selectAllButtonLabel => _isKrm ? 'Hemûyan hilbijêre' : 'دیاریکردنی هەموو';
 
   @override
-  String get lookUpButtonLabel => 'بە دوادا گەڕان';
+  String get lookUpButtonLabel => _isKrm ? 'Li dû da gerrîn' : 'بە دوادا گەڕان';
 
   @override
-  String get searchWebButtonLabel => 'گەڕان لە وێب';
+  String get searchWebButtonLabel => _isKrm ? 'Li wêbê bigere' : 'گەڕان لە وێب';
 
   @override
-  String get shareButtonLabel => 'هاوبەشکردن';
+  String get shareButtonLabel => _isKrm ? 'Hevparkirinê' : 'هاوبەشکردن';
 
   @override
-  String get reorderItemDown => 'بەرەو خوارەوە جوڵاندن';
+  String get reorderItemDown => _isKrm ? 'Ber bi jêrê ve bibe' : 'بەرەو خوارەوە جوڵاندن';
 
   @override
-  String get reorderItemLeft => 'بەرەو چەپ جوڵاندن';
+  String get reorderItemLeft => _isKrm ? 'Ber bi çepê ve bibe' : 'بەرەو چەپ جوڵاندن';
 
   @override
-  String get reorderItemRight => 'بەرەو ڕاست جوڵاندن';
+  String get reorderItemRight => _isKrm ? 'Ber bi rastê ve bibe' : 'بەرەو ڕاست جوڵاندن';
 
   @override
-  String get reorderItemToEnd => 'جوڵاندن بۆ کۆتایی';
+  String get reorderItemToEnd => _isKrm ? 'Biçe dawîyê' : 'جوڵاندن بۆ کۆتایی';
 
   @override
-  String get reorderItemToStart => 'جوڵاندن بۆ سەرەتا';
+  String get reorderItemToStart => _isKrm ? 'Biçe destpêkê' : 'جوڵاندن بۆ سەرەتا';
 
   @override
-  String get reorderItemUp => 'بەرەو سەرەوە جوڵاندن';
+  String get reorderItemUp => _isKrm ? 'Ber bi jorê ve bibe' : 'بەرەو سەرەوە جوڵاندن';
 }
