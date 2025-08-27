@@ -307,15 +307,7 @@ const kmrCupertinoDateSymbols = {
     'T.D',
     'Çir',
   ],
-  'WEEKDAYS': [
-    'Yekşem',
-    'Duşem',
-    'Sêşem',
-    'Çarşem',
-    'Pêncşem',
-    'În',
-    'Şemî'
-  ],
+  'WEEKDAYS': ['Yekşem', 'Duşem', 'Sêşem', 'Çarşem', 'Pêncşem', 'În', 'Şemî'],
   'STANDALONEWEEKDAYS': [
     'Yekşem',
     'Duşem',
@@ -325,24 +317,8 @@ const kmrCupertinoDateSymbols = {
     'În',
     'Şemî'
   ],
-  'SHORTWEEKDAYS': [
-    'Yek',
-    'Du',
-    'Sê',
-    'Çar',
-    'Pênc',
-    'În',
-    'Şem'
-  ],
-  'STANDALONESHORTWEEKDAYS': [
-    'Yek',
-    'Du',
-    'Sê',
-    'Çar',
-    'Pênc',
-    'În',
-    'Şem'
-  ],
+  'SHORTWEEKDAYS': ['Yek', 'Du', 'Sê', 'Çar', 'Pênc', 'În', 'Şem'],
+  'STANDALONESHORTWEEKDAYS': ['Yek', 'Du', 'Sê', 'Çar', 'Pênc', 'În', 'Şem'],
   'NARROWWEEKDAYS': ['Y', 'D', 'S', 'Ç', 'P', 'Î', 'Ş'],
   'STANDALONENARROWWEEKDAYS': ['Y', 'D', 'S', 'Ç', 'P', 'Î', 'Ş'],
   'SHORTQUARTERS': ['Ç1', 'Ç2', 'Ç3', 'Ç4'],
@@ -426,14 +402,14 @@ class KurdishCupertinoLocalizationsDelegate
   const KurdishCupertinoLocalizationsDelegate();
 
   @override
-  bool isSupported(Locale locale) => 
+  bool isSupported(Locale locale) =>
       locale.languageCode == 'ckb' || locale.languageCode == 'kmr';
 
   @override
   Future<CupertinoLocalizations> load(Locale locale) async {
     final String localeName = locale.languageCode;
     final bool isKmr = localeName == 'kmr';
-    
+
     // The locale needs to be initialized into the custom
     // date symbols and patterns setup that Flutter uses.
     date_symbol_data_custom.initializeDateFormattingCustom(
@@ -490,7 +466,7 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
     required intl.DateFormat singleDigitMinuteFormat,
     required intl.DateFormat singleDigitSecondFormat,
     required intl.DateFormat weekdayFormat,
-  }) : _localeName = localeName,
+  })  : _localeName = localeName,
         super(
           localeName: localeName,
           fullYearFormat: fullYearFormat,
@@ -533,22 +509,27 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
   String get postMeridiemAbbreviation => _isKmr ? r'PN' : r'د.ن';
 
   @override
-  String get selectAllButtonLabel => _isKmr ? r'Hemûyan hilbijêre' : r'دیاریکردنی هەموو';
+  String get selectAllButtonLabel =>
+      _isKmr ? r'Hemûyan hilbijêre' : r'دیاریکردنی هەموو';
 
   static const LocalizationsDelegate<CupertinoLocalizations> delegate =
       KurdishCupertinoLocalizationsDelegate();
 
   @override
-  String get datePickerDateOrderString => _isKmr ? "Hilbijartina dîrokê" : "هەڵبژاردنی بەروار";
+  String get datePickerDateOrderString =>
+      _isKmr ? "Hilbijartina dîrokê" : "هەڵبژاردنی بەروار";
 
   @override
-  String get datePickerDateTimeOrderString => _isKmr ? "Dem hilbijêre" : "کات هەڵبژێرە";
+  String get datePickerDateTimeOrderString =>
+      _isKmr ? "Dem hilbijêre" : "کات هەڵبژێرە";
 
   @override
-  String? get datePickerHourSemanticsLabelOther => _isKmr ? "Demjimêrî hilbijartina dîrokê" : "کاتژمێری هەڵبژاردنی بەروار";
+  String? get datePickerHourSemanticsLabelOther =>
+      _isKmr ? "Demjimêrî hilbijartina dîrokê" : "کاتژمێری هەڵبژاردنی بەروار";
 
   @override
-  String? get datePickerMinuteSemanticsLabelOther => _isKmr ? "Deqîqeyî hilbijartina dîrokê" : "خولەکی هەڵبژاردنی بەروار";
+  String? get datePickerMinuteSemanticsLabelOther =>
+      _isKmr ? "Deqîqeyî hilbijartina dîrokê" : "خولەکی هەڵبژاردنی بەروار";
 
   @override
   String get searchTextFieldPlaceholderLabel => _isKmr ? "Lêgerîn" : "گەڕان";
@@ -557,13 +538,16 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
   String get tabSemanticsLabelRaw => _isKmr ? "Manasaziya tab" : "ماناسازی تاب";
 
   @override
-  String? get timerPickerHourLabelOther => _isKmr ? "Hilbijêreri demjimêr" : "هەڵبژێرەری کاتژمێر";
+  String? get timerPickerHourLabelOther =>
+      _isKmr ? "Hilbijêreri demjimêr" : "هەڵبژێرەری کاتژمێر";
 
   @override
-  String? get timerPickerMinuteLabelOther => _isKmr ? "Hilbijêreri deqîqe" : "هەڵبژێرەری خولەک";
+  String? get timerPickerMinuteLabelOther =>
+      _isKmr ? "Hilbijêreri deqîqe" : "هەڵبژێرەری خولەک";
 
   @override
-  String? get timerPickerSecondLabelOther => _isKmr ? "Hilbijêreri çirke" : "هەڵبژێرەری چرکە";
+  String? get timerPickerSecondLabelOther =>
+      _isKmr ? "Hilbijêreri çirke" : "هەڵبژێرەری چرکە";
 
   @override
   String get todayLabel => _isKmr ? "Îro" : "ئەمڕۆ";

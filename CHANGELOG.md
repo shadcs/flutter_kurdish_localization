@@ -36,3 +36,12 @@
 ## 1.1.1
 
 - Fix text direction for Kurmanji (KMR) localization
+
+## 1.1.2
+
+- Update README.md for consistency in locale codes
+
+## 1.1.3
+
+- Fix typos and improve clarity in documentation
+- Update example app to reflect latest changes

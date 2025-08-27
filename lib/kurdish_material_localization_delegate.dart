@@ -12,7 +12,7 @@ class _KurdishMaterialLocalizationsDelegate
   const _KurdishMaterialLocalizationsDelegate();
 
   @override
-  bool isSupported(Locale locale) => 
+  bool isSupported(Locale locale) =>
       locale.languageCode == 'ckb' || locale.languageCode == 'kmr';
 
   @override
@@ -64,7 +64,7 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
     required intl.DateFormat yearMonthFormat,
     required intl.NumberFormat decimalFormat,
     required intl.NumberFormat twoDigitZeroPaddedFormat,
-  }) : _localeName = localeName,
+  })  : _localeName = localeName,
         super(
             localeName: localeName,
             shortDateFormat: shortDateFormat,
@@ -83,9 +83,8 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
       _KurdishMaterialLocalizationsDelegate();
 
   @override
-  String get aboutListTileTitleRaw => _isKmr 
-      ? 'Der barê \$applicationName de' 
-      : 'دەربارەی \$applicationName';
+  String get aboutListTileTitleRaw =>
+      _isKmr ? 'Der barê \$applicationName de' : 'دەربارەی \$applicationName';
 
   @override
   String get alertDialogLabel => _isKmr ? 'Hişyarî' : 'ئاگادارکردنەوە';
@@ -97,9 +96,8 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String get backButtonTooltip => _isKmr ? 'Vegere' : 'دواوە';
 
   @override
-  String get calendarModeButtonLabel => _isKmr 
-      ? 'Biçe nav salnameye' 
-      : 'گۆڕین بۆ ڕۆژژمێر';
+  String get calendarModeButtonLabel =>
+      _isKmr ? 'Biçe nav salnameye' : 'گۆڕین بۆ ڕۆژژمێر';
 
   @override
   String get cancelButtonLabel => _isKmr ? 'Betal bike' : 'هەڵوەشاندنەوه';
@@ -129,21 +127,23 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String get dateInputLabel => _isKmr ? 'Dîrok binivîse' : 'بەروار بنووسە';
 
   @override
-  String get dateOutOfRangeLabel => _isKmr ? 'Derveyî sînorê' : 'دەرەوەی مەودایە';
+  String get dateOutOfRangeLabel =>
+      _isKmr ? 'Derveyî sînorê' : 'دەرەوەی مەودایە';
 
   @override
-  String get datePickerHelpText => _isKmr ? 'Dîrok hilbijêre' : 'بەروار دیاری بکە';
+  String get datePickerHelpText =>
+      _isKmr ? 'Dîrok hilbijêre' : 'بەروار دیاری بکە';
 
   @override
-  String get dateRangeEndDateSemanticLabelRaw => _isKmr 
-      ? 'Dîroka dawîbûnê \$fullDate' 
-      : 'بەرواری کۆتایی \$fullDate';
+  String get dateRangeEndDateSemanticLabelRaw =>
+      _isKmr ? 'Dîroka dawîbûnê \$fullDate' : 'بەرواری کۆتایی \$fullDate';
 
   @override
   String get dateRangeEndLabel => _isKmr ? 'Dîroka dawîbûnê' : 'بەرواری کۆتایی';
 
   @override
-  String get dateRangePickerHelpText => _isKmr ? 'Nîşankirina mîqdarê' : 'دەست نیشانکردنی مەودا';
+  String get dateRangePickerHelpText =>
+      _isKmr ? 'Nîşankirina mîqdarê' : 'دەست نیشانکردنی مەودا';
 
   @override
   String get dateRangeStartDateSemanticLabelRaw => _isKmr
@@ -151,7 +151,8 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
       : 'بەرواری دەستپێکردن \$fullDate';
 
   @override
-  String get dateRangeStartLabel => _isKmr ? 'Dîroka destpêkirinê' : 'بەرواری دەستپێکردن';
+  String get dateRangeStartLabel =>
+      _isKmr ? 'Dîroka destpêkirinê' : 'بەرواری دەستپێکردن';
 
   @override
   String get dateSeparator => '/';
@@ -160,8 +161,8 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String get deleteButtonTooltip => _isKmr ? 'Jê bibe' : 'سڕینەوە';
 
   @override
-  String get dialModeButtonLabel => _isKmr 
-      ? 'Biçe nav moda hilbijêrê daxwazkirinê' 
+  String get dialModeButtonLabel => _isKmr
+      ? 'Biçe nav moda hilbijêrê daxwazkirinê'
       : 'گۆڕین بۆ دۆخی هەڵبژێری داواکردن';
 
   @override
@@ -174,35 +175,39 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String get expandedIconTapHint => _isKmr ? 'Biçûk bike' : 'نوشتانەوە';
 
   @override
-  String get hideAccountsLabel => _isKmr ? 'Ajimêran veşêre' : 'شاردنەوەی ئەژمێرەکان';
+  String get hideAccountsLabel =>
+      _isKmr ? 'Ajimêran veşêre' : 'شاردنەوەی ئەژمێرەکان';
 
   @override
-  String get inputDateModeButtonLabel => _isKmr ? 'Biçe nav nivîsandinê' : 'گۆڕین بۆ نووسین';
+  String get inputDateModeButtonLabel =>
+      _isKmr ? 'Biçe nav nivîsandinê' : 'گۆڕین بۆ نووسین';
 
   @override
-  String get inputTimeModeButtonLabel => _isKmr 
-      ? 'Biçe nav moda têkirdina deqê' 
-      : 'گۆڕین بۆ دۆخی تێکردنی دەق';
+  String get inputTimeModeButtonLabel =>
+      _isKmr ? 'Biçe nav moda têkirdina deqê' : 'گۆڕین بۆ دۆخی تێکردنی دەق';
 
   @override
-  String get invalidDateFormatLabel => _isKmr ? 'Format şaş e.' : 'فۆرماتی نادروست.';
+  String get invalidDateFormatLabel =>
+      _isKmr ? 'Format şaş e.' : 'فۆرماتی نادروست.';
 
   @override
-  String get invalidDateRangeLabel => _isKmr ? 'Mîqdarek şaş.' : 'مەودایەکی نادروست.';
+  String get invalidDateRangeLabel =>
+      _isKmr ? 'Mîqdarek şaş.' : 'مەودایەکی نادروست.';
 
   @override
-  String get invalidTimeLabel => _isKmr ? 'Demek rast binivîse' : 'کاتێکی دروست بنووسە';
+  String get invalidTimeLabel =>
+      _isKmr ? 'Demek rast binivîse' : 'کاتێکی دروست بنووسە';
 
   @override
   String get licensesPackageDetailTextOne => _isKmr ? '1 lîsans' : '١ مۆڵەت';
 
   @override
-  String get licensesPackageDetailTextOther => _isKmr 
-      ? '\$licenseCount lîsans' 
-      : '\$licenseCount مۆڵەت';
+  String get licensesPackageDetailTextOther =>
+      _isKmr ? '\$licenseCount lîsans' : '\$licenseCount مۆڵەت';
 
   @override
-  String get licensesPackageDetailTextZero => _isKmr ? 'Lîsans nîne' : 'مۆڵەت نیە';
+  String get licensesPackageDetailTextZero =>
+      _isKmr ? 'Lîsans nîne' : 'مۆڵەت نیە';
 
   @override
   String get licensesPageTitle => _isKmr ? 'Lîsansan' : 'مۆڵەتەکان';
@@ -223,13 +228,12 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String get okButtonLabel => _isKmr ? 'Temam' : 'باشه';
 
   @override
-  String get openAppDrawerTooltip => _isKmr 
-      ? 'Lîsteya rêberiyê veke' 
-      : 'کردنەوەی لیستی ڕێنیشاندەر';
+  String get openAppDrawerTooltip =>
+      _isKmr ? 'Lîsteya rêberiyê veke' : 'کردنەوەی لیستی ڕێنیشاندەر';
 
   @override
-  String get pageRowsInfoTitleRaw => _isKmr 
-      ? '\$firstRow–\$lastRow ji \$rowCount' 
+  String get pageRowsInfoTitleRaw => _isKmr
+      ? '\$firstRow–\$lastRow ji \$rowCount'
       : '\$firstRow–\$lastRow لە \$rowCount';
 
   @override
@@ -253,13 +257,14 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String get previousPageTooltip => _isKmr ? 'Rûpela berê' : 'لاپەڕەی پێشوو';
 
   @override
-  String get refreshIndicatorSemanticLabel => _isKmr ? 'Nûkirinê' : 'نوێکردنەوە';
+  String get refreshIndicatorSemanticLabel =>
+      _isKmr ? 'Nûkirinê' : 'نوێکردنەوە';
 
   @override
   String? get remainingTextFieldCharacterCountFew => null;
 
   @override
-  List<String> get narrowWeekdays => _isKmr 
+  List<String> get narrowWeekdays => _isKmr
       ? ['Y', 'D', 'S', 'Ç', 'P', 'Î', 'Ş']
       : ['ی', 'د', 'س', 'چ', 'پ', 'ه', 'ش'];
 
@@ -267,20 +272,19 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String? get remainingTextFieldCharacterCountMany => null;
 
   @override
-  String get remainingTextFieldCharacterCountOne => _isKmr ? '1 tîp maye' : '١ پیت ماوە';
+  String get remainingTextFieldCharacterCountOne =>
+      _isKmr ? '1 tîp maye' : '١ پیت ماوە';
 
   @override
-  String get remainingTextFieldCharacterCountOther => _isKmr
-      ? '\$remainingCount tîp mane'
-      : '\$remainingCount پیتەکان ماون';
+  String get remainingTextFieldCharacterCountOther =>
+      _isKmr ? '\$remainingCount tîp mane' : '\$remainingCount پیتەکان ماون';
 
   @override
   String? get remainingTextFieldCharacterCountTwo => null;
 
   @override
-  String get remainingTextFieldCharacterCountZero => _isKmr 
-      ? 'Tu tîpek nemaye' 
-      : 'هیچ پیتێک نەماوەتەوە';
+  String get remainingTextFieldCharacterCountZero =>
+      _isKmr ? 'Tu tîpek nemaye' : 'هیچ پیتێک نەماوەتەوە';
 
   @override
   String get reorderItemDown => _isKmr ? 'Biçe jêr' : 'بڕۆ خوارەوە';
@@ -301,7 +305,8 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String get reorderItemUp => _isKmr ? 'Biçe jor' : 'بڕۆ سەرەوە';
 
   @override
-  String get rowsPerPageTitle => _isKmr ? 'Rêz bo her rûpelê:' : 'ڕیزەکان بۆ هەر پەڕەیەک:';
+  String get rowsPerPageTitle =>
+      _isKmr ? 'Rêz bo her rûpelê:' : 'ڕیزەکان بۆ هەر پەڕەیەک:';
 
   @override
   String get saveButtonLabel => _isKmr ? 'Tomar bike' : 'هەڵگرتن';
@@ -313,10 +318,12 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String get searchFieldLabel => _isKmr ? 'Lêgerîn' : 'گەڕان';
 
   @override
-  String get selectAllButtonLabel => _isKmr ? 'Hemûyan hilbijêre' : 'هەموو هەڵبژێرە';
+  String get selectAllButtonLabel =>
+      _isKmr ? 'Hemûyan hilbijêre' : 'هەموو هەڵبژێرە';
 
   @override
-  String get selectYearSemanticsLabel => _isKmr ? 'Sal hilbijêre' : 'ساڵ هەڵبژێرە';
+  String get selectYearSemanticsLabel =>
+      _isKmr ? 'Sal hilbijêre' : 'ساڵ هەڵبژێرە';
 
   @override
   String? get selectedRowCountTitleFew => null;
@@ -325,21 +332,24 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String? get selectedRowCountTitleMany => null;
 
   @override
-  String get selectedRowCountTitleOne => _isKmr ? '1 dane hilbijartî' : '١ دانە هەڵبژێردرا';
+  String get selectedRowCountTitleOne =>
+      _isKmr ? '1 dane hilbijartî' : '١ دانە هەڵبژێردرا';
 
   @override
-  String get selectedRowCountTitleOther => _isKmr 
-      ? '\$selectedRowCount hilbijartî' 
+  String get selectedRowCountTitleOther => _isKmr
+      ? '\$selectedRowCount hilbijartî'
       : '\$selectedRowCount هەڵبژێردراو';
 
   @override
   String? get selectedRowCountTitleTwo => null;
 
   @override
-  String get selectedRowCountTitleZero => _isKmr ? 'Tu nehatiye hilbijartin' : 'هیچ هەڵنەبژێراوە';
+  String get selectedRowCountTitleZero =>
+      _isKmr ? 'Tu nehatiye hilbijartin' : 'هیچ هەڵنەبژێراوە';
 
   @override
-  String get showAccountsLabel => _isKmr ? 'Ajimêran nîşan bide' : 'پیشاندانی ئەژمێرەکان';
+  String get showAccountsLabel =>
+      _isKmr ? 'Ajimêran nîşan bide' : 'پیشاندانی ئەژمێرەکان';
 
   @override
   String get showMenuTooltip => _isKmr ? 'Menû nîşan bide' : 'پیشاندانی پێڕست';
@@ -348,21 +358,23 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String get signedInLabel => _isKmr ? 'Têketiye nav' : 'چوونە ژوورەوە';
 
   @override
-  String get tabLabelRaw => _isKmr 
-      ? 'Bindestî \$tabIndex ji \$tabCount' 
+  String get tabLabelRaw => _isKmr
+      ? 'Bindestî \$tabIndex ji \$tabCount'
       : 'خشتەبەندی \$tabIndex لە \$tabCount';
 
   @override
   TimeOfDayFormat get timeOfDayFormatRaw => TimeOfDayFormat.h_colon_mm_space_a;
 
   @override
-  String get timePickerDialHelpText => _isKmr ? 'Dem hilbijêre' : 'کات هەڵبژێرە';
+  String get timePickerDialHelpText =>
+      _isKmr ? 'Dem hilbijêre' : 'کات هەڵبژێرە';
 
   @override
   String get timePickerHourLabel => _isKmr ? 'Demjimêr' : 'کاتژمێر';
 
   @override
-  String get timePickerHourModeAnnouncement => _isKmr ? 'Demjimêr hilbijêre' : 'کاتژمێر هەڵبژێرە';
+  String get timePickerHourModeAnnouncement =>
+      _isKmr ? 'Demjimêr hilbijêre' : 'کاتژمێر هەڵبژێرە';
 
   @override
   String get timePickerInputHelpText => _isKmr ? 'Dem binivîse' : 'کات بنووسە';
@@ -371,16 +383,19 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String get timePickerMinuteLabel => _isKmr ? 'Deqîqe' : 'خولەک';
 
   @override
-  String get timePickerMinuteModeAnnouncement => _isKmr ? 'Deqîqe hilbijêre' : 'خولەک هەڵبژێرە';
+  String get timePickerMinuteModeAnnouncement =>
+      _isKmr ? 'Deqîqe hilbijêre' : 'خولەک هەڵبژێرە';
 
   @override
   String get unspecifiedDate => _isKmr ? 'Dîrok' : 'بەروار';
 
   @override
-  String get unspecifiedDateRange => _isKmr ? 'Mîqdara dîrokê' : 'مەودای بەروار';
+  String get unspecifiedDateRange =>
+      _isKmr ? 'Mîqdara dîrokê' : 'مەودای بەروار';
 
   @override
-  String get viewLicensesButtonLabel => _isKmr ? 'Lîsansan nîşan bide' : 'پیشاندانی مۆڵەتەکان';
+  String get viewLicensesButtonLabel =>
+      _isKmr ? 'Lîsansan nîşan bide' : 'پیشاندانی مۆڵەتەکان';
 
   @override
   String get firstPageTooltip => _isKmr ? 'Rûpela yekem' : 'لاپه‌ڕه‌ی سه‌ره‌تا';
@@ -566,7 +581,8 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String get scrimLabel => _isKmr ? 'Belav nan' : 'بەلاوە نان';
 
   @override
-  String get scrimOnTapHintRaw => _isKmr ? 'Pence binê bo derxistinê' : 'پەنجە بنێ بۆ دەرکردن';
+  String get scrimOnTapHintRaw =>
+      _isKmr ? 'Pence binê bo derxistinê' : 'پەنجە بنێ بۆ دەرکردن';
 
   @override
   String get collapsedHint => _isKmr ? 'Darma' : 'داڕما';
@@ -578,16 +594,20 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String get expansionTileCollapsedHint => _isKmr ? 'Darma' : 'داڕما';
 
   @override
-  String get expansionTileCollapsedTapHint => _isKmr ? 'Bo firawankirinê pence binê' : 'بۆ فراوانکردن پەنجە بنێ';
+  String get expansionTileCollapsedTapHint =>
+      _isKmr ? 'Bo firawankirinê pence binê' : 'بۆ فراوانکردن پەنجە بنێ';
 
   @override
-  String get expansionTileExpandedHint => _isKmr ? 'Firawan kirawe' : 'فراوانتر کراوە';
+  String get expansionTileExpandedHint =>
+      _isKmr ? 'Firawan kirawe' : 'فراوانتر کراوە';
 
   @override
-  String get expansionTileExpandedTapHint => _isKmr ? 'Pence binê bo ku firawan bît' : 'پەنجە بنێ بۆ ئەوەی فراوانبێت';
+  String get expansionTileExpandedTapHint =>
+      _isKmr ? 'Pence binê bo ku firawan bît' : 'پەنجە بنێ بۆ ئەوەی فراوانبێت';
 
   @override
-  String get scanTextButtonLabel => _isKmr ? 'Deqa skankirinê' : 'دەقی سکانکردن';
+  String get scanTextButtonLabel =>
+      _isKmr ? 'Deqa skankirinê' : 'دەقی سکانکردن';
 
   @override
   String get lookUpButtonLabel => _isKmr ? 'Li dû da gerrîn' : 'بە دوادا گەڕان';
@@ -897,15 +917,7 @@ const kmrDateSymbols = {
     'T.D',
     'Çir',
   ],
-  'WEEKDAYS': [
-    'Yekşem',
-    'Duşem',
-    'Sêşem',
-    'Çarşem',
-    'Pêncşem',
-    'În',
-    'Şemî'
-  ],
+  'WEEKDAYS': ['Yekşem', 'Duşem', 'Sêşem', 'Çarşem', 'Pêncşem', 'În', 'Şemî'],
   'STANDALONEWEEKDAYS': [
     'Yekşem',
     'Duşem',
@@ -915,24 +927,8 @@ const kmrDateSymbols = {
     'În',
     'Şemî'
   ],
-  'SHORTWEEKDAYS': [
-    'Yek',
-    'Du',
-    'Sê',
-    'Çar',
-    'Pênc',
-    'În',
-    'Şem'
-  ],
-  'STANDALONESHORTWEEKDAYS': [
-    'Yek',
-    'Du',
-    'Sê',
-    'Çar',
-    'Pênc',
-    'În',
-    'Şem'
-  ],
+  'SHORTWEEKDAYS': ['Yek', 'Du', 'Sê', 'Çar', 'Pênc', 'În', 'Şem'],
+  'STANDALONESHORTWEEKDAYS': ['Yek', 'Du', 'Sê', 'Çar', 'Pênc', 'În', 'Şem'],
   'NARROWWEEKDAYS': ['Y', 'D', 'S', 'Ç', 'P', 'Î', 'Ş'],
   'STANDALONENARROWWEEKDAYS': ['Y', 'D', 'S', 'Ç', 'P', 'Î', 'Ş'],
   'SHORTQUARTERS': ['Ç1', 'Ç2', 'Ç3', 'Ç4'],
