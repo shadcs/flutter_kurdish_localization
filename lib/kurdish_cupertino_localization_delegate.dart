@@ -488,6 +488,24 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
   @override
   String get alertDialogLabel => _isKmr ? r'Hişyarî' : r'ئاگادارکردنەوە';
 
+  @override
+  String get collapsedHint => _isKmr ? 'Berfireh bû' : 'کۆنراوە';
+
+  @override
+  String get expandedHint => _isKmr ? 'Berfireh bû' : 'فراوان بوو';
+
+  @override
+  String get expansionTileCollapsedHint => _isKmr ? 'Du caran baz bike' : 'دوو جار کەوە بکە';
+
+  @override
+  String get expansionTileCollapsedTapHint => _isKmr ? 'Ji bo bêtir hûrgulî' : 'بۆ زانیاری زیاتر';
+
+  @override
+  String get expansionTileExpandedHint => _isKmr ? 'Ji bo berhevkirinê' : 'بۆ کۆکۆیەک';
+
+  @override
+  String get expansionTileExpandedTapHint => _isKmr ? 'Berhev bike' : 'کۆڵەکەیە';
+
 // #enddocregion Getters
 
   @override

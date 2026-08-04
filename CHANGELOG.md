@@ -45,3 +45,9 @@
 
 - Fix typos and improve clarity in documentation
 - Update example app to reflect latest changes
+
+## 1.1.4
+
+- Improve Cupertino localization compatibility with the latest Flutter SDK
+- Add missing accessibility-related localization getters for Cupertino widgets
+- Keep Kurmanji and Sorani locale handling consistent across delegates
