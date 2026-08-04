@@ -45,7 +45,7 @@ class _MyAppState extends State<MyApp> {
         useMaterial3: true,
       ),
       home: MyHomePage(
-        title: 'Kurdish Localization Demo', 
+        title: 'Kurdish Localization Demo',
         onLocaleChange: _changeLocale,
         currentLocale: _currentLocale,
       ),
@@ -55,8 +55,8 @@ class _MyAppState extends State<MyApp> {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({
-    super.key, 
-    required this.title, 
+    super.key,
+    required this.title,
     required this.onLocaleChange,
     required this.currentLocale,
   });
@@ -80,8 +80,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    String currentDialect = widget.currentLocale.languageCode == 'ckb' ? 'Sorani' : 'Kurmanji';
-    
+    String currentDialect =
+        widget.currentLocale.languageCode == 'ckb' ? 'Sorani' : 'Kurmanji';
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -117,7 +118,8 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const SizedBox(height: 20),
             Text(
-              MaterialLocalizations.of(context).aboutListTileTitle('Kurdish Localization'),
+              MaterialLocalizations.of(context)
+                  .aboutListTileTitle('Kurdish Localization'),
               style: Theme.of(context).textTheme.bodyLarge,
             ),
             const SizedBox(height: 20),

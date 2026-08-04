@@ -1,3 +1,9 @@
+## 1.2.0
+
+- Converted to a pure Dart package: removed the empty native plugin scaffolding (Android, iOS, Linux, macOS, Windows, web plugin) that served no purpose, so the package now supports all platforms with no native build requirements.
+- Fixed compatibility with the latest Flutter SDK by adding the missing `radioButtonUnselectedLabel` getter to `KurdishWidgetLocalizations`.
+- Removed unused `plugin_platform_interface` and `flutter_web_plugins` dependencies.
+
 ## 1.0.0
 
 - Update to latest Flutter version.

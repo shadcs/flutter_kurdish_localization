@@ -5,13 +5,11 @@
   "packages": [
     {
       "name": "kurdish_localization_plus",
-      "version": "1.1.4",
+      "version": "1.2.0",
       "dependencies": [
         "flutter",
         "flutter_localizations",
-        "flutter_web_plugins",
-        "intl",
-        "plugin_platform_interface"
+        "intl"
       ],
       "devDependencies": [
         "flutter_lints",
@@ -44,26 +42,12 @@
       ]
     },
     {
-      "name": "plugin_platform_interface",
-      "version": "2.1.8",
-      "dependencies": [
-        "meta"
-      ]
-    },
-    {
       "name": "intl",
       "version": "0.20.2",
       "dependencies": [
         "clock",
         "meta",
         "path"
-      ]
-    },
-    {
-      "name": "flutter_web_plugins",
-      "version": "0.0.0",
-      "dependencies": [
-        "flutter"
       ]
     },
     {

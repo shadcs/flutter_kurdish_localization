@@ -9,7 +9,7 @@ class _KurdishMaterialLocalizationsDelegate
   const _KurdishMaterialLocalizationsDelegate();
 
   @override
-  bool isSupported(Locale locale) => 
+  bool isSupported(Locale locale) =>
       locale.languageCode == 'ckb' || locale.languageCode == 'kmr';
 
   @override
@@ -25,15 +25,16 @@ class _KurdishMaterialLocalizationsDelegate
 
 class KurdishWidgetLocalizations extends WidgetsLocalizations {
   KurdishWidgetLocalizations({this.localeName = 'ckb'});
-  
+
   final String localeName;
   bool get _isKmr => localeName == 'kmr';
-  
+
   static const LocalizationsDelegate<WidgetsLocalizations> delegate =
       _KurdishMaterialLocalizationsDelegate();
 
   @override
-  TextDirection get textDirection => _isKmr ? TextDirection.ltr : TextDirection.rtl;
+  TextDirection get textDirection =>
+      _isKmr ? TextDirection.ltr : TextDirection.rtl;
 
   @override
   String get copyButtonLabel => _isKmr ? 'Jêber bike' : 'کۆپی';
@@ -45,7 +46,8 @@ class KurdishWidgetLocalizations extends WidgetsLocalizations {
   String get pasteButtonLabel => _isKmr ? 'Pêve bike' : 'پەیست';
 
   @override
-  String get selectAllButtonLabel => _isKmr ? 'Hemûyan hilbijêre' : 'دیاریکردنی هەموو';
+  String get selectAllButtonLabel =>
+      _isKmr ? 'Hemûyan hilbijêre' : 'دیاریکردنی هەموو';
 
   @override
   String get lookUpButtonLabel => _isKmr ? 'Li dû da gerrîn' : 'بە دوادا گەڕان';
@@ -57,20 +59,25 @@ class KurdishWidgetLocalizations extends WidgetsLocalizations {
   String get shareButtonLabel => _isKmr ? 'Hevparkirinê' : 'هاوبەشکردن';
 
   @override
-  String get reorderItemDown => _isKmr ? 'Ber bi jêrê ve bibe' : 'بەرەو خوارەوە جوڵاندن';
+  String get reorderItemDown =>
+      _isKmr ? 'Ber bi jêrê ve bibe' : 'بەرەو خوارەوە جوڵاندن';
 
   @override
-  String get reorderItemLeft => _isKmr ? 'Ber bi çepê ve bibe' : 'بەرەو چەپ جوڵاندن';
+  String get reorderItemLeft =>
+      _isKmr ? 'Ber bi çepê ve bibe' : 'بەرەو چەپ جوڵاندن';
 
   @override
-  String get reorderItemRight => _isKmr ? 'Ber bi rastê ve bibe' : 'بەرەو ڕاست جوڵاندن';
+  String get reorderItemRight =>
+      _isKmr ? 'Ber bi rastê ve bibe' : 'بەرەو ڕاست جوڵاندن';
 
   @override
   String get reorderItemToEnd => _isKmr ? 'Biçe dawîyê' : 'جوڵاندن بۆ کۆتایی';
 
   @override
-  String get reorderItemToStart => _isKmr ? 'Biçe destpêkê' : 'جوڵاندن بۆ سەرەتا';
+  String get reorderItemToStart =>
+      _isKmr ? 'Biçe destpêkê' : 'جوڵاندن بۆ سەرەتا';
 
   @override
-  String get reorderItemUp => _isKmr ? 'Ber bi jorê ve bibe' : 'بەرەو سەرەوە جوڵاندن';
+  String get reorderItemUp =>
+      _isKmr ? 'Ber bi jorê ve bibe' : 'بەرەو سەرەوە جوڵاندن';
 }
