@@ -80,4 +80,8 @@ class KurdishWidgetLocalizations extends WidgetsLocalizations {
   @override
   String get reorderItemUp =>
       _isKmr ? 'Ber bi jorê ve bibe' : 'بەرەو سەرەوە جوڵاندن';
+
+  @override
+  String get radioButtonUnselectedLabel =>
+      _isKmr ? 'Ne hilbijartî' : 'هەڵبژێردراو نییە';
 }
