@@ -1,0 +1,12 @@
+# App scaffolding retained only for multi-platform build support in the
+# repository. The published package is a pure Dart library.
+android/
+ios/
+linux/
+macos/
+web/
+windows/
+
+# Demo app entry point and tests (included in the repository only).
+test/
+lib/main.dart
